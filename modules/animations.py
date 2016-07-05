@@ -36,69 +36,6 @@ mpl.rcParams.update({'font.size': 12})
 mpl.rcParams["axes.formatter.useoffset"] = False
 
 
-def load_ERDDAP(
-        timerange, depth=0,
-        path='https://salishsea.eos.ubc.ca/erddap/griddap',
-        plot_opts={'wind': True, 'currents': True, 'salinity': True},
-        window={'x_NEMO': slice(0, 400), 'x_GEM': slice(0, 637500),
-                'y_NEMO': slice(0, 900), 'y_GEM': slice(0, 662500)}
-):
-    """Load Nowcast and GEM results from ERDDAP using xarray
-    """
-    
-    # Intialize storage dictionaries
-    grid, qty = {}, {}
-    
-    # Create timeslice
-    timeslice = slice(timerange[0], timerange[1])
-    
-    # Conditional loading
-    if plot_opts['wind']:
-        # Load GEM grid
-        GEM_grid = xr.open_dataset(os.path.join(path, 'ubcSSaAtmosphereGridV1'))
-        grid['lon_GEM'] = GEM_grid.longitude.sel(
-                    gridX=window['x_GEM' ], gridY=window['y_GEM'])-360
-        grid['lat_GEM'] = GEM_grid.latitude.sel(
-                    gridX=window['x_GEM' ], gridY=window['y_GEM'])
-        
-        # Load GEM winds
-        GEM_op = xr.open_dataset(os.path.join(
-                    path, 'ubcSSaSurfaceAtmosphereFieldsV1'))
-        qty['u_GEM'] = GEM_op.u_wind.sel(time=timeslice,
-                    gridX=window['x_GEM'], gridY=window['y_GEM'])
-        qty['v_GEM'] = GEM_op.v_wind.sel(time=timeslice,
-                    gridX=window['x_GEM'], gridY=window['y_GEM'])
-    
-    if plot_opts['currents'] or plot_opts['salinity']:
-        # Load NEMO grid
-        NEMO_grid = xr.open_dataset(os.path.join(path, 'ubcSSnBathymetry2V1'))
-        grid['lon_NEMO'] = NEMO_grid.longitude.sel(
-                    gridX=window['x_NEMO'], gridY=window['y_NEMO'])
-        grid['lat_NEMO'] = NEMO_grid.latitude.sel(
-                    gridX=window['x_NEMO'], gridY=window['y_NEMO'])
-        
-        if plot_opts['currents']:
-            # Load NEMO currents
-            NEMO_u = xr.open_dataset(os.path.join(path,'ubcSSn3DuVelocity1hV1'))
-            NEMO_v = xr.open_dataset(os.path.join(path,'ubcSSn3DvVelocity1hV1'))
-            qty['u_NEMO'] = NEMO_u.uVelocity.sel(time=timeslice,
-                    gridX=window['x_NEMO'], gridY=window['y_NEMO']).sel(
-                    depth=depth, method='nearest')
-            qty['v_NEMO'] = NEMO_v.vVelocity.sel(time=timeslice,
-                    gridX=window['x_NEMO'], gridY=window['y_NEMO']).sel(
-                    depth=depth, method='nearest')
-            
-        if plot_opts['salinity']:
-            # Load NEMO salinity
-            NEMO_trc = xr.open_dataset(os.path.join(
-                    path, 'ubcSSn3DTracerFields1hV1'))
-            qty['S_NEMO'] = NEMO_trc.salinity.sel(time=timeslice,
-                    gridX=window['x_NEMO'], gridY=window['y_NEMO']).sel(
-                    depth=depth, method='nearest')
-    
-    return grid, qty
-
-
 def load_results(
         timerange, spacing={'NEMO': 5, 'GEM': 5},
         plot_opts={'wind'    : True, 'currents': True,
@@ -163,60 +100,95 @@ def load_results(
     return grid, qty, qty_f
 
 
-def load_drifters(prefix='driftersPositions',
-                  path='/ocean/bmoorema/research/MEOPAR/analysis-ben/data'):
+def plot_tracers(time_ind, ax, cmap, clim, qty, NEMO, zorder=0):
     """
     """
     
-    # Initialize drifter storage dictionary
-    drifters = collections.OrderedDict()
+    # NEMO horizontal tracers
+    C = ax.contourf(NEMO['lon'], NEMO['lat'],
+        np.ma.masked_values(NEMO[qty].sel(time=time_ind, method='nearest'), 0),
+        range(clim[0], clim[1], clim[2]), cmap=cmap, zorder=zorder)
     
-    # Drifter IDs
-    drifterids = collections.OrderedDict()
-    drifterids['1'] = [1, 2, 3, 4, 5, 6, 311, 312, 313]
-    drifterids['2'] = [21, 22]
-    drifterids['3'] = [23, 24, 25, 31, 32, 33, 34, 35, 36, 381, 382, 388]
-    
-    for deployment in drifterids.keys():
-        # Construct filename
-        filename = prefix + deployment + '.mat'
-        
-        # Load drifter matfile
-        driftermat = sio.loadmat(os.path.join(path, filename))
-        
-        # Iterate through drifters
-        for drifterid in drifterids[deployment]:
-            
-            # Construct time list and convert to datetime
-            times = driftermat['drifters'][0][drifterid-1][4]
-            if isinstance(times[0][0], float):
-                pytime = [dtm.datetime.fromordinal(int(t[0])) +
-                          dtm.timedelta(days = t[0]%1) -
-                          dtm.timedelta(days = 366) - dtm.timedelta(hours=1)
-                          for t in times]
-            elif isinstance(times[0][0], str):
-                pytime = [dparser.parse(t) for t in times]
-            else:
-                raise ValueError(
-                    'Unknown time type: {}'.format(type(times[0][0])))
-            
-            # Store drifter lon and lat as xarray DataArray objects
-            lons = xr.DataArray(
-                [lon[0] for lon in driftermat['drifters'][0][drifterid-1][3]],
-                coords=[pytime], dims=['time'])
-            lats = xr.DataArray(
-                [lat[0] for lat in driftermat['drifters'][0][drifterid-1][2]],
-                coords=[pytime], dims=['time'])
-            
-            # Sort lon/lat by increasing datetime and store in dictionary
-            drifters[driftermat['drifters'][0][drifterid-1][0][0]] = {
-                'lon': lons[lons.time.argsort()],
-                'lat': lats[lats.time.argsort()]}
-            
-    return drifters
+    return C
 
 
-def plot_currents(
+def plot_currents(time_ind, ax, spacing, NEMO, zorder=5):
+    """
+    """
+    
+    # NEMO horizontal currents
+    Q = ax.quiver(
+        NEMO['lon'][1::spacing, 1::spacing],
+        NEMO['lat'][1::spacing, 1::spacing],
+        np.ma.masked_values(
+            NEMO['u'].sel(time=time_ind, method='nearest'), 0),
+        np.ma.masked_values(
+            NEMO['v'].sel(time=time_ind, method='nearest'), 0),
+        scale=10, zorder=zorder)
+    
+    return Q
+
+
+def plot_wind(time_ind, ax, spacing, GEM, zorder=10, processed=False,
+              color='gray'):
+    """
+    """
+    
+    # Determine whether to space vectors
+    spc = spacing
+    if processed: spc = 1
+    
+    # GEM winds
+    Q = ax.quiver(
+        GEM['lon'][::spacing, ::spacing],
+        GEM['lat'][::spacing, ::spacing],
+        GEM['u_wind'].sel(time=time_ind, method='nearest')[::spc, ::spc],
+        GEM['v_wind'].sel(time=time_ind, method='nearest')[::spc, ::spc],
+        color=color, edgecolor='k', scale=40,
+        linewidth=0.5, headwidth=4, zorder=zorder)
+    
+    return Q
+
+
+def plot_drifters(time_ind, ax, drifters, zorder=15):
+    """
+    """
+    
+    # Define color palette
+    palette = ['blue', 'teal', 'cyan', 'green', 'lime', 'darkred', 'red',
+               'orange', 'magenta', 'purple', 'black', 'dimgray', 'saddlebrown',
+               'blue', 'teal', 'cyan', 'green', 'lime', 'darkred', 'red',
+               'orange', 'magenta', 'purple', 'black', 'dimgray', 'saddlebrown']
+    
+    # Plot drifters
+    L = collections.OrderedDict()
+    P = collections.OrderedDict()
+    for i, drifter in enumerate(drifters.keys()):
+        # Compare timestep with available drifter data
+        dtime = [pd.Timestamp(t.to_pandas()).to_datetime() - time_ind
+                 for t in drifters[drifter].time[[0, -1]]]
+        # Show drifter track if data is within time threshold
+        if (dtime[0].total_seconds() < 3600 and   # 1 hour before deployment
+            dtime[1].total_seconds() > -86400):   # 24 hours after failure
+            L[drifter] = ax.plot(
+                drifters[drifter].lon.sel(time=time_ind, method='nearest'),
+                drifters[drifter].lat.sel(time=time_ind, method='nearest'),
+                '-', linewidth=2, color=palette[i], zorder=zorder)
+            P[drifter] = ax.plot(
+                drifters[drifter].lon.sel(time=time_ind, method='nearest'),
+                drifters[drifter].lat.sel(time=time_ind, method='nearest'),
+                'o', color=palette[i], zorder=zorder+1)
+        else: # Hide if outside time threshold
+            L[drifter] = ax.plot(
+                [], [], '-', linewidth=2, color=palette[i], zorder=zorder)
+            P[drifter] = ax.plot(
+                [], [], 'o', color=palette[i], zorder=zorder+1)
+    
+    return L, P
+
+
+
+def plot_currents_old(
         ax, fig, init_time, grid, qty, drifters,
         map_bounds=[-124, -122.7, 48.3, 49.7],
         cmap_type='jet', landmask='burlywood',
