@@ -6,33 +6,44 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[early_vel_plots.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/early_vel_plots.ipynb)  
+* ##[Wind_comparisons_jan2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Wind_comparisons_jan2016.ipynb)  
     
-* ##[Accessing_NEMO_results.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Accessing_NEMO_results.ipynb)  
-    
-    **Accessing NEMO results**  
-    This notebook explores different ways to access NEMO results and the associated computational efficiency  
+    **HRDPS Evaluation January 2016**  
+    This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for January 2016  
 
-* ##[ERDDAP_test.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ERDDAP_test.ipynb)  
+* ##[Wind_comparisons_mar2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Wind_comparisons_mar2016.ipynb)  
     
-    **ERDDAP Testing Notebook**  
-    Load GEM winds and NEMO currents for 24 hours on 1 April 2016  
+    **HRDPS Evaluation March 2016**  
+    This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for March 2016  
 
-* ##[vector_tracer_animations.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/vector_tracer_animations.ipynb)  
+* ##[bathymetry_map.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/bathymetry_map.ipynb)  
     
-    **Vector and Tracer Animations**  
-    This notebook loads and animates Salish Sea NEMO 3.4 Nowcast results. It requires having the XArray and Basemap packages installed.  
+    **Model Domain and Bathymetry**  
+    This notebook plots the model domain and bathymetry over a basemap projection of the larger region.  
 
-* ##[module_testing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/module_testing.ipynb)  
+* ##[visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/visualization_workflows_xarray.ipynb)  
     
-* ##[weather_comparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/weather_comparisons.ipynb)  
-    
-    An example of how I would like to use MFDataset for reading in atmopsheric model.   
+    **Visualisation of NEMO/GEM/Observations using XArray**  
+    This notebook demonstrates the use of several tools for easy loading and visualization of model results and drifter observations. Most of these tools require `xarray`, and rather than make them flexible to other packages, I thought I would just demonstrate their use with `xarray` here.  
+      
+    First we'll import the necessary libraries and set our preferred notebook formatting.  
 
-* ##[Currents_Analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Currents_Analysis.ipynb)  
+* ##[HRDPS_correction.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/HRDPS_correction.ipynb)  
     
-    **Currents Analysis**  
-    This notebook processes and visualizes Salish Sea NEMO currents. Results are obtained from the Nowcast system through the ERDDAP server using the `xarray` library.  
+    **HRDPS Correction Check**  
+    This notebook checks the HRDPS correction obtained from Luc Fillion's group  
+
+* ##[Sechelt_current.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Sechelt_current.ipynb)  
+    
+    **Sechelt Current Analysis**  
+    This notebook estimates fluxes along the Sunshine Coast.  
+      
+    We can observe a northward current along the sunshine coast that changes in strength at subtidal frequencies. Let's analyze the flux through a cross-strait transect.  
+
+* ##[Stakeholder_plots.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Stakeholder_plots.ipynb)  
+    
+    **Stakeholder Plots**  
+    Wind-driven currents plots for the Stakeholders 2016 meeting poster and brochure  
 
 
 ##License
