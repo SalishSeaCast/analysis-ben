@@ -4,7 +4,7 @@ Salish Sea NEMO Analysis
 :License: Apache License, Version 2.0
 
 This is a collection of analyses of the results of the Salish Sea MEOPAR NEMO model.
-Most of the files are IPython Notebooks.
+Most of the files are Jupyter Python 3 Notebooks.
 See the README.md files in each directory for links to read-only renderings of the notebooks.
 That is especially useful if you are viewing this repository on Bitbucket.
 
