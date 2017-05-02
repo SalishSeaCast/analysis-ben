@@ -1,4 +1,4 @@
-The IPython Notebooks in this directory are made by Ben for
+The Jupyter Notebooks in this directory are made by Ben for
 quick sharing of results.
 
 The links below are to static renderings of the notebooks via
@@ -10,16 +10,6 @@ Descriptions below the links are from the first cell of the notebooks
     
     **HRDPS Evaluation January 2016**  
     This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for January 2016  
-
-* ##[Wind_comparisons_mar2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Wind_comparisons_mar2016.ipynb)  
-    
-    **HRDPS Evaluation March 2016**  
-    This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for March 2016  
-
-* ##[bathymetry_map.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/bathymetry_map.ipynb)  
-    
-    **Model Domain and Bathymetry**  
-    This notebook plots the model domain and bathymetry over a basemap projection of the larger region.  
 
 * ##[visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/visualization_workflows_xarray.ipynb)  
     
@@ -33,22 +23,40 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Correction Check**  
     This notebook checks the HRDPS correction obtained from Luc Fillion's group  
 
-* ##[Sechelt_current.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Sechelt_current.ipynb)  
+* ##[timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_usage.ipynb)  
     
-    **Sechelt Current Analysis**  
-    This notebook estimates fluxes along the Sunshine Coast.  
-      
-    We can observe a northward current along the sunshine coast that changes in strength at subtidal frequencies. Let's analyze the flux through a cross-strait transect.  
+    **Timeseries Tools Usage**  
+    This notebook demonstrates loading in a Nowcast timeseries using `timeseries_tools`. `Timeseries_tools` extracts only the required fields from the Nowcast netCDF files and concatenates the flattened (time, space) numpy arrays together. This uses a minimum amount of memory relative to bulkier routines such as `mfdataset`. The flattened arrays are reshaped before they are returned, but there is an option to keep them flattened, which is necessary for certain data analysis methods like principal component analysis.  
 
-* ##[Stakeholder_plots.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Stakeholder_plots.ipynb)  
+* ##[SeicheScaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SeicheScaling.ipynb)  
     
-    **Stakeholder Plots**  
-    Wind-driven currents plots for the Stakeholders 2016 meeting poster and brochure  
+    **Scaling Upwelling and Seicheing in the Strait of Georgia**  
+
+* ##[Wind_comparisons_mar2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Wind_comparisons_mar2016.ipynb)  
+    
+    **HRDPS Evaluation March 2016**  
+    This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for March 2016  
+
+* ##[NowcastTimeseries.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NowcastTimeseries.ipynb)  
+    
+    **SalishSeaCast Nowcast Timeseries Analysis**  
+    This notebook loads hourly Nowcast results 1 day at a time, and extracts selected slices into numpy arrays. The notebook itself is a development environment for the script `analysis-ben/scripts/prepare_nowcast_timeseries.py`.  
+
+* ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
+    
+* ##[Maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Maps.ipynb)  
+    
+    **Salish Sea Maps**  
+    This notebook plots various maps relevant to the SalishSeaCast project. The first map is a general study area map. The second map shows the model domain and bathymetry. The third map shows the Strait of Georgia with relevant observation platform locations overplotted.  
+
+* ##[WindAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/WindAnalysis.ipynb)  
+    
+    **Wind Analysis**  
 
 
 ##License
 
-These notebooks and files are copyright 2013-2016
+These notebooks and files are copyright 2013-2017
 by the Salish Sea MEOPAR Project Contributors
 and The University of British Columbia.
 
