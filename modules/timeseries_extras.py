@@ -1,10 +1,6 @@
 from salishsea_tools import timeseries_tools
-from collections import defaultdict
-from IPython.display import clear_output
-
-
-def makedict():
-    return defaultdict(makedict)
+from scipy.io import savemat
+import os
 
 
 def reshape_GEM(data, grid, mask):
@@ -12,7 +8,7 @@ def reshape_GEM(data, grid, mask):
     """
 
     # Build GEM coordinates
-    data_flat = makedict()
+    data_flat = {'raw': {'grid': {}}}
     mask_flt, coords, ngrid, ngrid_water = timeseries_tools.reshape_coords_GEM(
         grid, mask,
     )
@@ -34,16 +30,21 @@ def reshape_GEM(data, grid, mask):
     return data_flat
 
 
-def iterate_NEMO_timeseries(timerange, variables, mask, dims, indices):
+def iterate_NEMO_timeseries(
+        timerange, variables, mask, dims, indices, datadir='nowcast2016',
+        datapath='/ocean/bmoorema/research/MEOPAR/analysis-ben/data',
+):
     """
     """
-
-    # Intialize empty dict
-    results = makedict()
 
     # Loop through results slices
     for var in variables:  # --- Loop through variables
+
         for dim, index in zip(dims, indices):  # --- Loop through slices
+
+            # Initialize dictionaries
+            coords = {}
+            data = {}
 
             # Determine filenames and unstaggering from variable names
             dim_in, unstagger = dim, None
@@ -62,21 +63,24 @@ def iterate_NEMO_timeseries(timerange, variables, mask, dims, indices):
 
             # Determine spacing from variable names and slicing
             if (var is 'vozocrtx' or var is 'vomecrty') and dim is 'depth':
-                spacing = 5
+                spacing = 1
             else:
                 spacing = 1
 
             # Load Results
             filenames = timeseries_tools.make_filename_list(
-                timerange, file, model='nowcast-green', resolution='h')
-            results[var][dim][index]['data'], \
-                results[var][dim][index]['coords'] = \
-                timeseries_tools.load_NEMO_timeseries(
-                    filenames, mask, var, dim_in, index=index,
-                    spacing=spacing, shape='flat', unstagger_dim=unstagger,
-                )
+                timerange, file, model='nowcast-green', resolution='h',
+            )
+            data, coords = timeseries_tools.load_NEMO_timeseries(
+                filenames, mask, var, dim_in, index=index,
+                spacing=spacing, shape='flat', unstagger_dim=unstagger,
+            )
 
             # Export timerange
-            results[var][dim][index]['coords']['timerange'] = timerange
+            coords['timerange'] = timerange
 
-    return results
+            # Save model results
+            savemat(os.path.join(
+                datapath, datadir, var, f'{var}_{dim}{index}.mat'), data)
+            savemat(os.path.join(
+                datapath, datadir, var, f'coords_{dim}{index}.mat'), coords)

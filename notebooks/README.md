@@ -77,6 +77,8 @@ Descriptions below the links are from the first cell of the notebooks
        * Concatenate consecutive 24 hour periods  
        * Reshape the concatenated `Numpy ndarray` to (time, depth, y, x)  
 
+* ##[SpectralAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SpectralAnalysis.ipynb)  
+    
 * ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
     
 * ##[Maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Maps.ipynb)  
