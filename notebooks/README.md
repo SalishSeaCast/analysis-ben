@@ -60,8 +60,8 @@ Descriptions below the links are from the first cell of the notebooks
       
        1. [Load Nowcast and GEM Record](#Load-Nowcast-and-GEM-Record)  
        2. [Principal Component Analysis](#Principal-Component-Analysis)  
-       3. [Varimax Rotation]()  
-       4. [Explore Results]()  
+       3. [Varimax Rotation](#Varimax-Rotation)  
+       4. [Explore Results](#2016-HRDPS-Wind-EOFs)  
 
 * ##[Wind_comparisons_mar2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Wind_comparisons_mar2016.ipynb)  
     
