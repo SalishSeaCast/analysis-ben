@@ -81,11 +81,33 @@ Descriptions below the links are from the first cell of the notebooks
     
 * ##[TA.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/TA.ipynb)  
     
+    **Fraser/Strait of Georgia Freshwater Chemistry Analysis**  
+    This is the data notebook  
+    **Sections**  
+       1. [Local Functions](#Local-Functions)  
+       2. [Load Data](#Load-Data)  
+       3. [TA regressions](#TA-regressions)  
+       4. [Fraser River Buoy pH Data](#Fraser-River-Buoy-pH-Data)  
+       5. [Freshwater DIC:TA scenarios](#Freshwater-DIC:TA-scenarios)  
+
 * ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
     
 * ##[DensitySections.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DensitySections.ipynb)  
     
     **Nowcast Upwelling Analysis**  
+
+* ##[SOG_river_figures.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_river_figures.ipynb)  
+    
+    **SOG Freshwater Chemistry Sensitivity Notebook**  
+    This is the model sensitivity notebook  
+    **Sections**  
+       1. [Define Local Functions](#Define-Local-Functions)  
+       2. [Load and Process Data](#Load-and-Process-Data)  
+       3. [**Make Figures**](#Make-Figures)  
+           * [Flow Dependence Figures](#Flow-Dependence-Figures)  
+           * [SOG Timeseries Figures](#SOG-Timeseries-Figures)  
+           * [SOG Salinity Average Figures](#SOG-Salinity-Average-Figures)  
+           * [Salinity Space Figures](#Salinity-Space-Figures)  
 
 * ##[Maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Maps.ipynb)  
     
