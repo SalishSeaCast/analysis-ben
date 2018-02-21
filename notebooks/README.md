@@ -23,6 +23,8 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Correction Check**  
     This notebook checks the HRDPS correction obtained from Luc Fillion's group  
 
+* ##[DICTA_world_rivers.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DICTA_world_rivers.ipynb)  
+    
 * ##[timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_usage.ipynb)  
     
     **Timeseries Tools Usage**  
@@ -109,6 +111,8 @@ Descriptions below the links are from the first cell of the notebooks
            * [SOG Salinity Average Figures](#SOG-Salinity-Average-Figures)  
            * [Salinity Space Figures](#Salinity-Space-Figures)  
 
+* ##[OS2018_plots.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OS2018_plots.ipynb)  
+    
 * ##[Maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Maps.ipynb)  
     
     **Salish Sea Maps**  
