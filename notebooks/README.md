@@ -113,6 +113,8 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[OS2018_plots.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OS2018_plots.ipynb)  
     
+    **Hindcast timeseries analysis**  
+
 * ##[Maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Maps.ipynb)  
     
     **Salish Sea Maps**  
@@ -122,6 +124,8 @@ Descriptions below the links are from the first cell of the notebooks
     
     **Wind Analysis**  
 
+* ##[SedimentModel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SedimentModel.ipynb)  
+    
 
 ##License
 
