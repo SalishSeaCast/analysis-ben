@@ -92,6 +92,8 @@ Descriptions below the links are from the first cell of the notebooks
        4. [Fraser River Buoy pH Data](#Fraser-River-Buoy-pH-Data)  
        5. [Freshwater DIC:TA scenarios](#Freshwater-DIC:TA-scenarios)  
 
+* ##[NEMOConfigSetup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NEMOConfigSetup.ipynb)  
+    
 * ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
     
 * ##[DensitySections.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DensitySections.ipynb)  
