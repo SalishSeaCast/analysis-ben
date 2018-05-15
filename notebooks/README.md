@@ -11,6 +11,8 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Evaluation January 2016**  
     This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for January 2016  
 
+* ##[Hakai_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Hakai_data.ipynb)  
+    
 * ##[visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/visualization_workflows_xarray.ipynb)  
     
     **Visualisation of NEMO/GEM/Observations using XArray**  
@@ -29,6 +31,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     **Timeseries Tools Usage**  
     This notebook demonstrates loading in a Nowcast timeseries using `timeseries_tools`. `Timeseries_tools` extracts only the required fields from the Nowcast netCDF files and concatenates the flattened (time, space) numpy arrays together. This uses a minimum amount of memory relative to bulkier routines such as `mfdataset`. The flattened arrays are reshaped before they are returned, but there is an option to keep them flattened, which is necessary for certain data analysis methods like principal component analysis.  
+
+* ##[AnalyticalModel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/AnalyticalModel.ipynb)  
+    
+    **Analytical Upwelling Model**  
 
 * ##[make_nowcast_timeseries.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/make_nowcast_timeseries.ipynb)  
     
