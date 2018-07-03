@@ -78,6 +78,10 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Evaluation March 2016**  
     This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for March 2016  
 
+* ##[upwelling_geostrophic_velocities.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/upwelling_geostrophic_velocities.ipynb)  
+    
+    **Upwelling velocities notebook**  
+
 * ##[timeseries_tools_dev.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_dev.ipynb)  
     
     **`timeseries_tools` Development Notebook**  
