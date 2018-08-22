@@ -125,6 +125,8 @@ Descriptions below the links are from the first cell of the notebooks
            * [SOG Salinity Average Figures](#SOG-Salinity-Average-Figures)  
            * [Salinity Space Figures](#Salinity-Space-Figures)  
 
+* ##[Tug_spill_preliminary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Tug_spill_preliminary.ipynb)  
+    
 * ##[OS2018_plots.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OS2018_plots.ipynb)  
     
     **Hindcast timeseries analysis**  
