@@ -25,6 +25,8 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Correction Check**  
     This notebook checks the HRDPS correction obtained from Luc Fillion's group  
 
+* ##[VelocityComparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/VelocityComparisons.ipynb)  
+    
 * ##[DICTA_world_rivers.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DICTA_world_rivers.ipynb)  
     
 * ##[timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_usage.ipynb)  
@@ -60,6 +62,8 @@ Descriptions below the links are from the first cell of the notebooks
        6. Canonical Correlation Analysis  
 
 * ##[SOG_chem_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_chem_data.ipynb)  
+    
+* ##[ForceBalanceModelSummary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ForceBalanceModelSummary.ipynb)  
     
 * ##[CPCA_varimax.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/CPCA_varimax.ipynb)  
     
@@ -112,6 +116,8 @@ Descriptions below the links are from the first cell of the notebooks
     
     **Nowcast Upwelling Analysis**  
 
+* ##[KelvinWaves.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/KelvinWaves.ipynb)  
+    
 * ##[SOG_river_figures.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_river_figures.ipynb)  
     
     **SOG Freshwater Chemistry Sensitivity Notebook**  
@@ -125,6 +131,8 @@ Descriptions below the links are from the first cell of the notebooks
            * [SOG Salinity Average Figures](#SOG-Salinity-Average-Figures)  
            * [Salinity Space Figures](#Salinity-Space-Figures)  
 
+* ##[AnalyticalModel_friction.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/AnalyticalModel_friction.ipynb)  
+    
 * ##[Tug_spill_preliminary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Tug_spill_preliminary.ipynb)  
     
 * ##[OS2018_plots.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OS2018_plots.ipynb)  
