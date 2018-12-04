@@ -82,6 +82,8 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Evaluation March 2016**  
     This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for March 2016  
 
+* ##[ATW_model.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ATW_model.ipynb)  
+    
 * ##[upwelling_geostrophic_velocities.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/upwelling_geostrophic_velocities.ipynb)  
     
     **Upwelling velocities notebook**  
@@ -145,6 +147,8 @@ Descriptions below the links are from the first cell of the notebooks
     This notebook plots various maps relevant to the SalishSeaCast project. The first map is a general study area map. The second map shows the model domain and bathymetry. The third map shows the Strait of Georgia with relevant observation platform locations overplotted.  
 
 * ##[Upwelling_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling_analysis.ipynb)  
+    
+* ##[ShallowWaterModelSummary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ShallowWaterModelSummary.ipynb)  
     
 * ##[WindAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/WindAnalysis.ipynb)  
     
