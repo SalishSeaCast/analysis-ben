@@ -6,11 +6,6 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[Wind_comparisons_jan2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Wind_comparisons_jan2016.ipynb)  
-    
-    **HRDPS Evaluation January 2016**  
-    This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for January 2016  
-
 * ##[Hakai_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Hakai_data.ipynb)  
     
 * ##[visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/visualization_workflows_xarray.ipynb)  
@@ -25,18 +20,10 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Correction Check**  
     This notebook checks the HRDPS correction obtained from Luc Fillion's group  
 
-* ##[VelocityComparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/VelocityComparisons.ipynb)  
-    
-* ##[DICTA_world_rivers.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DICTA_world_rivers.ipynb)  
-    
 * ##[timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_usage.ipynb)  
     
     **Timeseries Tools Usage**  
     This notebook demonstrates loading in a Nowcast timeseries using `timeseries_tools`. `Timeseries_tools` extracts only the required fields from the Nowcast netCDF files and concatenates the flattened (time, space) numpy arrays together. This uses a minimum amount of memory relative to bulkier routines such as `mfdataset`. The flattened arrays are reshaped before they are returned, but there is an option to keep them flattened, which is necessary for certain data analysis methods like principal component analysis.  
-
-* ##[AnalyticalModel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/AnalyticalModel.ipynb)  
-    
-    **Analytical Upwelling Model**  
 
 * ##[make_nowcast_timeseries.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/make_nowcast_timeseries.ipynb)  
     
@@ -61,10 +48,6 @@ Descriptions below the links are from the first cell of the notebooks
        5. [Principal Component Analysis](#Principal-Component-Analysis)  
        6. Canonical Correlation Analysis  
 
-* ##[SOG_chem_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_chem_data.ipynb)  
-    
-* ##[ForceBalanceModelSummary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ForceBalanceModelSummary.ipynb)  
-    
 * ##[CPCA_varimax.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/CPCA_varimax.ipynb)  
     
     **Principal Component Analysis of Nowcast Velocities**  
@@ -77,13 +60,6 @@ Descriptions below the links are from the first cell of the notebooks
        3. [Varimax Rotation](#Varimax-Rotation)  
        4. [Explore Results](#2016-HRDPS-Wind-EOFs)  
 
-* ##[Wind_comparisons_mar2016.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Wind_comparisons_mar2016.ipynb)  
-    
-    **HRDPS Evaluation March 2016**  
-    This notebook compares the GEM 2.5 km HRDPS wind product to local windstation records for March 2016  
-
-* ##[ATW_model.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ATW_model.ipynb)  
-    
 * ##[upwelling_geostrophic_velocities.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/upwelling_geostrophic_velocities.ipynb)  
     
     **Upwelling velocities notebook**  
@@ -97,19 +73,8 @@ Descriptions below the links are from the first cell of the notebooks
        * Concatenate consecutive 24 hour periods  
        * Reshape the concatenated `Numpy ndarray` to (time, depth, y, x)  
 
-* ##[SpectralAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SpectralAnalysis.ipynb)  
+* ##[GRL2016_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/GRL2016_data.ipynb)  
     
-* ##[TA.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/TA.ipynb)  
-    
-    **Fraser/Strait of Georgia Freshwater Chemistry Analysis**  
-    This is the data notebook  
-    **Sections**  
-       1. [Local Functions](#Local-Functions)  
-       2. [Load Data](#Load-Data)  
-       3. [TA regressions](#TA-regressions)  
-       4. [Fraser River Buoy pH Data](#Fraser-River-Buoy-pH-Data)  
-       5. [Freshwater DIC:TA scenarios](#Freshwater-DIC:TA-scenarios)  
-
 * ##[NEMOConfigSetup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NEMOConfigSetup.ipynb)  
     
 * ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
@@ -118,23 +83,6 @@ Descriptions below the links are from the first cell of the notebooks
     
     **Nowcast Upwelling Analysis**  
 
-* ##[KelvinWaves.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/KelvinWaves.ipynb)  
-    
-* ##[SOG_river_figures.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_river_figures.ipynb)  
-    
-    **SOG Freshwater Chemistry Sensitivity Notebook**  
-    This is the model sensitivity notebook  
-    **Sections**  
-       1. [Define Local Functions](#Define-Local-Functions)  
-       2. [Load and Process Data](#Load-and-Process-Data)  
-       3. [**Make Figures**](#Make-Figures)  
-           * [Flow Dependence Figures](#Flow-Dependence-Figures)  
-           * [SOG Timeseries Figures](#SOG-Timeseries-Figures)  
-           * [SOG Salinity Average Figures](#SOG-Salinity-Average-Figures)  
-           * [Salinity Space Figures](#Salinity-Space-Figures)  
-
-* ##[AnalyticalModel_friction.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/AnalyticalModel_friction.ipynb)  
-    
 * ##[Tug_spill_preliminary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Tug_spill_preliminary.ipynb)  
     
 * ##[OS2018_plots.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OS2018_plots.ipynb)  
@@ -146,13 +94,19 @@ Descriptions below the links are from the first cell of the notebooks
     **Salish Sea Maps**  
     This notebook plots various maps relevant to the SalishSeaCast project. The first map is a general study area map. The second map shows the model domain and bathymetry. The third map shows the Strait of Georgia with relevant observation platform locations overplotted.  
 
-* ##[Upwelling_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling_analysis.ipynb)  
-    
 * ##[ShallowWaterModelSummary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ShallowWaterModelSummary.ipynb)  
     
-* ##[WindAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/WindAnalysis.ipynb)  
-    
-    **Wind Analysis**  
+    **Shallow water models of coastal upwelling**  
+      
+    This notebook summarizes several attempts to model coastal upwelling in the Strait of Georgia using the shallow water equations. These modelling attempts are an effort to explain the dynamics of enhanced upwelling around capes that we observe in the SalishSeaCast model (see [**Motivation**](#Motivation)). The following cases are explored:  
+      
+       1. [**Linear time dependence**](#Linear-time-dependence)  
+           * [Surface height sink near coast](#Surface-height-sink-near-coast)  
+           * [Linear bottom friction](#Linear-bottom-friction)  
+           * [Longshore windstress](#Longshore-windstress)  
+       2. [**Steady state**](#Steady-state)  
+           * [Linear bottom friction, non-zero depth gradient](#Linear-bottom-friction,-non-zero-depth-gradient)  
+           * [Longshore bottom friction, cross-shelf bottom slope](#Longshore-bottom-friction,-cross-shelf-bottom-slope)  
 
 * ##[SedimentModel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SedimentModel.ipynb)  
     
