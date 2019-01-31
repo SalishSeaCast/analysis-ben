@@ -25,6 +25,14 @@ Descriptions below the links are from the first cell of the notebooks
     **Timeseries Tools Usage**  
     This notebook demonstrates loading in a Nowcast timeseries using `timeseries_tools`. `Timeseries_tools` extracts only the required fields from the Nowcast netCDF files and concatenates the flattened (time, space) numpy arrays together. This uses a minimum amount of memory relative to bulkier routines such as `mfdataset`. The flattened arrays are reshaped before they are returned, but there is an option to keep them flattened, which is necessary for certain data analysis methods like principal component analysis.  
 
+* ##[ATW_relaxation_Susan.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ATW_relaxation_Susan.ipynb)  
+    
+    **ATW relaxation notebook**  
+
+* ##[SalishSeaCast_timeseries_from_Skookum.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SalishSeaCast_timeseries_from_Skookum.ipynb)  
+    
+    **Working with daily SalishSeaCast results from Skookum**  
+
 * ##[make_nowcast_timeseries.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/make_nowcast_timeseries.ipynb)  
     
     **Make Nowcast Timeseries**  
@@ -82,10 +90,36 @@ Descriptions below the links are from the first cell of the notebooks
     
 * ##[SalishSeaIdeal_wavedamping.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SalishSeaIdeal_wavedamping.ipynb)  
     
+    **SalishSeaIdeal Wavedamping**  
+    In this notebook I'm attemping to arrest the Kelvin wave in the idealized Salish Sea NEMO configuration using a combination of bathymetry roughness and bottom friction.  
+
 * ##[NEMOConfigSetup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NEMOConfigSetup.ipynb)  
     
 * ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
     
+    **ONC API 2.0 Usage**  
+    Python API usage  
+      
+    [`https://wiki.oceannetworks.ca/display/O2A/Python+Client+Library`](https://wiki.oceannetworks.ca/display/O2A/Python+Client+Library)  
+      
+    Timeseries parameters  
+      
+    [`https://wiki.oceannetworks.ca/display/DP/1`](https://wiki.oceannetworks.ca/display/DP/1)  
+      
+    ADCP parameters  
+      
+    [`https://wiki.oceannetworks.ca/display/DP/5`](https://wiki.oceannetworks.ca/display/DP/5)  
+      
+    ***  
+      
+    **Installation**  
+      
+    `$ pip install onc`  
+      
+    ***  
+      
+    **Import libraries**  
+
 * ##[ATW_relaxation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ATW_relaxation.ipynb)  
     
     **ATW relaxation notebook**  
