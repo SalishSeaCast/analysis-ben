@@ -6,6 +6,8 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
+* ##[Idealized_cape_runs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Idealized_cape_runs.ipynb)  
+    
 * ##[Hakai_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Hakai_data.ipynb)  
     
 * ##[visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/visualization_workflows_xarray.ipynb)  
