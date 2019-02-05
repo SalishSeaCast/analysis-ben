@@ -8,6 +8,10 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[Idealized_cape_runs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Idealized_cape_runs.ipynb)  
     
+    **Idealized Cape Runs**  
+      
+    Here I'm showing my latest smooth and rough bathymetries with $C_D = 10^{-2}$ and $z_r = 0.07$ m  
+
 * ##[Hakai_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Hakai_data.ipynb)  
     
 * ##[visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/visualization_workflows_xarray.ipynb)  
@@ -129,6 +133,12 @@ Descriptions below the links are from the first cell of the notebooks
 * ##[DensitySections.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DensitySections.ipynb)  
     
     **Nowcast Upwelling Analysis**  
+
+* ##[Baynes_upwelling_run_comparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Baynes_upwelling_run_comparisons.ipynb)  
+    
+    **Baynes Upwelling Run Comparisons**  
+      
+    This notebook uses sequential cases beginning with the full configuration to see whether an upwelling event can be preserved along the Baynes Sound coastal section of Vancouver Island.  
 
 * ##[HRDPS_loading_numpy.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/HRDPS_loading_numpy.ipynb)  
     
