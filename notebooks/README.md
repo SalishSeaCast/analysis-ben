@@ -99,6 +99,14 @@ Descriptions below the links are from the first cell of the notebooks
     **SalishSeaIdeal Wavedamping**  
     In this notebook I'm attemping to arrest the Kelvin wave in the idealized Salish Sea NEMO configuration using a combination of bathymetry roughness and bottom friction.  
 
+* ##[Baynes_Sound_upwelling_runs_setup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Baynes_Sound_upwelling_runs_setup.ipynb)  
+    
+    **Baynes Sound upwelling runs setup**  
+      
+    ***  
+
+* ##[Ferry_upwelling_observations.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Ferry_upwelling_observations.ipynb)  
+    
 * ##[NEMOConfigSetup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NEMOConfigSetup.ipynb)  
     
 * ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
