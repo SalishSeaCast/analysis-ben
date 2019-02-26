@@ -1,5 +1,9 @@
-from salishsea_tools import timeseries_tools
+from salishsea_tools import timeseries_tools, utilities
 from scipy.io import savemat
+from datetime import timedelta
+from dateutil.parser import parse
+import numpy as np
+import xarray as xr
 import os
 
 
@@ -84,3 +88,66 @@ def iterate_NEMO_timeseries(
                 datapath, datadir, var, f'{var}_{dim}{index}.mat'), data)
             savemat(os.path.join(
                 datapath, datadir, var, f'coords_{dim}{index}.mat'), coords)
+
+
+def load_hindcast_timeseries_location(
+    varlist, locs, daterange, loadpath, writepath,
+    ftype='grid_T', res='h', date_cutoff=None, loadpath_cutoff=None,
+):
+    """Loads a list of NEMO hindcast variables from the daily file
+    record at specified point locations over a specified date range
+    and writes the resulting timeseries to a pickle file.
+    """
+
+    # Parse daterange
+    dates = [parse(date) for date in daterange]
+
+    # Create dict to hold timeseries at locs
+    data = {'time': np.empty(0, dtype='datetime64')}
+    for key in locs:
+        data[key] = {}
+        for var in varlist:
+            data[key][var] = np.empty(0)
+
+    # Loop through all hindcast hourly files
+    bar = utilities.statusbar('Loading NEMO record ...')
+    for day in bar(range(np.diff(dates)[0].days)):
+
+        # Parse date info
+        date = dates[0] + timedelta(days=day)
+        datestr = date.strftime('%Y%m%d')
+
+        # Consider date cutoff for path switch
+        path = loadpath
+        if date_cutoff is not None:
+            if date >= parse(date_cutoff):
+                path = loadpath_cutoff
+
+        # Load timeseries at points
+        fn = os.path.join(
+            path, date.strftime('%d%b%y').lower(),
+            f'SalishSea_1{res}_{datestr}_{datestr}_{ftype}.nc',
+        )
+        with xr.open_dataset(fn) as ds:
+            data['time'] = np.concatenate(
+                [data['time'], ds.time_counter.values],
+            )
+            for key in locs:
+                for var in varlist:
+                    data[key][var] = np.concatenate([
+                        data[key][var],
+                        ds[var][(slice(None),) + locs[key][::-1]].values,
+                    ])
+
+    # Save to xarray dataset
+    prefix = os.path.split(loadpath)[1].replace('.', '')
+    dates = [date.strftime('%Y%m%d') for date in dates]
+    for key in locs:
+        for var in varlist:
+            data[key][var] = ('time', data[key][var])
+        fn = os.path.join(
+            writepath, '_'.join([prefix] + dates + [key] + varlist) + '.nc',
+        )
+        xr.Dataset(data[key], coords={'time': data['time']}).to_netcdf(fn)
+
+    return
