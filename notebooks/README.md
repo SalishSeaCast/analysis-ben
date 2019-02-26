@@ -35,6 +35,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     **ATW relaxation notebook**  
 
+* ##[Baynes_climatology.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Baynes_climatology.ipynb)  
+    
+    **Baynes climatology**  
+
 * ##[SalishSeaCast_timeseries_from_Skookum.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SalishSeaCast_timeseries_from_Skookum.ipynb)  
     
     **Working with daily SalishSeaCast results from Skookum**  
