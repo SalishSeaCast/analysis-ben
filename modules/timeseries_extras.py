@@ -96,7 +96,7 @@ def load_hindcast_timeseries_location(
 ):
     """Loads a list of NEMO hindcast variables from the daily file
     record at specified point locations over a specified date range
-    and writes the resulting timeseries to a pickle file.
+    and writes the resulting timeseries to a netCDF file.
     """
 
     # Parse daterange
