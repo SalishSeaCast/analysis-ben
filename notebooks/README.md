@@ -87,6 +87,8 @@ Descriptions below the links are from the first cell of the notebooks
     
     **Upwelling velocities notebook**  
 
+* ##[Upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling_scaling.ipynb)  
+    
 * ##[timeseries_tools_dev.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_dev.ipynb)  
     
     **`timeseries_tools` Development Notebook**  
