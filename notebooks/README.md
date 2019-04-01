@@ -144,6 +144,12 @@ Descriptions below the links are from the first cell of the notebooks
     
     **ATW relaxation notebook**  
 
+* ##[Satellite_SST.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Satellite_SST.ipynb)  
+    
+    **Satellite SST upwelling notebook**  
+      
+    Source: NASA JPL MUR project https://podaac.jpl.nasa.gov/Multi-scale_Ultra-high_Resolution_MUR-SST  
+
 * ##[DensitySections.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DensitySections.ipynb)  
     
     **Nowcast Upwelling Analysis**  
