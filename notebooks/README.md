@@ -26,6 +26,10 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Correction Check**  
     This notebook checks the HRDPS correction obtained from Luc Fillion's group  
 
+* ##[opendrift_forcing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/opendrift_forcing.ipynb)  
+    
+    **OpenDrift forcing**  
+
 * ##[timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_usage.ipynb)  
     
     **Timeseries Tools Usage**  
@@ -89,6 +93,8 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[Upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling_scaling.ipynb)  
     
+    **Upwelling Scaling**  
+
 * ##[timeseries_tools_dev.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_dev.ipynb)  
     
     **`timeseries_tools` Development Notebook**  
@@ -105,6 +111,8 @@ Descriptions below the links are from the first cell of the notebooks
     **SalishSeaIdeal Wavedamping**  
     In this notebook I'm attemping to arrest the Kelvin wave in the idealized Salish Sea NEMO configuration using a combination of bathymetry roughness and bottom friction.  
 
+* ##[NEMO_grid_rotation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NEMO_grid_rotation.ipynb)  
+    
 * ##[Baynes_Sound_upwelling_runs_setup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Baynes_Sound_upwelling_runs_setup.ipynb)  
     
     **Baynes Sound upwelling runs setup**  
