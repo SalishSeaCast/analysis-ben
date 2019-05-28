@@ -1,7 +1,8 @@
-from salishsea_tools import timeseries_tools, utilities
+from salishsea_tools import timeseries_tools
 from scipy.io import savemat
 from datetime import timedelta
 from dateutil.parser import parse
+from tqdm import tqdm
 import numpy as np
 import xarray as xr
 import os
@@ -110,8 +111,7 @@ def load_hindcast_timeseries_location(
             data[key][var] = np.empty(0)
 
     # Loop through all hindcast hourly files
-    bar = utilities.statusbar('Loading NEMO record ...')
-    for day in bar(range(np.diff(dates)[0].days)):
+    for day in tqdm(range(np.diff(dates)[0].days)):
 
         # Parse date info
         date = dates[0] + timedelta(days=day)
