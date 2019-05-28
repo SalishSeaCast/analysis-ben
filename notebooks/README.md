@@ -12,6 +12,12 @@ Descriptions below the links are from the first cell of the notebooks
       
     Here I'm showing my latest smooth and rough bathymetries with $C_D = 10^{-2}$ and $z_r = 0.07$ m  
 
+* ##[Upwelling_visualization.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling_visualization.ipynb)  
+    
+    **Upwelling visualization**  
+      
+    ***  
+
 * ##[Hakai_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Hakai_data.ipynb)  
     
 * ##[visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/visualization_workflows_xarray.ipynb)  
@@ -28,7 +34,21 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[opendrift_forcing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/opendrift_forcing.ipynb)  
     
-    **OpenDrift forcing**  
+    **OpenDrift**  
+      
+    **Documentation**  
+      
+    [https://github.com/opendrift/opendrift/wiki](https://github.com/opendrift/opendrift/wiki)  
+      
+    ***  
+      
+    **Installation**  
+      
+    `git clone https://github.com/OpenDrift/opendrift.git`  
+      
+    `python setup.py develop --user`  
+      
+    ***  
 
 * ##[timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_usage.ipynb)  
     
@@ -94,6 +114,8 @@ Descriptions below the links are from the first cell of the notebooks
 * ##[Upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling_scaling.ipynb)  
     
     **Upwelling Scaling**  
+      
+    ***  
 
 * ##[timeseries_tools_dev.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_dev.ipynb)  
     
@@ -123,6 +145,12 @@ Descriptions below the links are from the first cell of the notebooks
     
 * ##[NEMOConfigSetup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NEMOConfigSetup.ipynb)  
     
+* ##[Analytical_upwelling_models_new.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Analytical_upwelling_models_new.ipynb)  
+    
+    **Analytical upwelling models**  
+      
+    ***  
+
 * ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
     
     **ONC API 2.0 Usage**  
@@ -196,6 +224,12 @@ Descriptions below the links are from the first cell of the notebooks
        2. [**Steady state**](#Steady-state)  
            * [Linear bottom friction, non-zero depth gradient](#Linear-bottom-friction,-non-zero-depth-gradient)  
            * [Longshore bottom friction, cross-shelf bottom slope](#Longshore-bottom-friction,-cross-shelf-bottom-slope)  
+
+* ##[New_upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/New_upwelling_scaling.ipynb)  
+    
+    **Upwelling Scaling**  
+      
+    ***  
 
 * ##[SedimentModel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SedimentModel.ipynb)  
     
