@@ -6,18 +6,6 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[Idealized_cape_runs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Idealized_cape_runs.ipynb)  
-    
-    **Idealized Cape Runs**  
-      
-    Here I'm showing my latest smooth and rough bathymetries with $C_D = 10^{-2}$ and $z_r = 0.07$ m  
-
-* ##[Upwelling_visualization.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling_visualization.ipynb)  
-    
-    **Upwelling visualization**  
-      
-    ***  
-
 * ##[Hakai_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Hakai_data.ipynb)  
     
 * ##[visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/visualization_workflows_xarray.ipynb)  
@@ -32,36 +20,10 @@ Descriptions below the links are from the first cell of the notebooks
     **HRDPS Correction Check**  
     This notebook checks the HRDPS correction obtained from Luc Fillion's group  
 
-* ##[opendrift_forcing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/opendrift_forcing.ipynb)  
-    
-    **OpenDrift**  
-      
-    **Documentation**  
-      
-    [https://github.com/opendrift/opendrift/wiki](https://github.com/opendrift/opendrift/wiki)  
-      
-    ***  
-      
-    **Installation**  
-      
-    `git clone https://github.com/OpenDrift/opendrift.git`  
-      
-    `python setup.py develop --user`  
-      
-    ***  
-
 * ##[timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_usage.ipynb)  
     
     **Timeseries Tools Usage**  
     This notebook demonstrates loading in a Nowcast timeseries using `timeseries_tools`. `Timeseries_tools` extracts only the required fields from the Nowcast netCDF files and concatenates the flattened (time, space) numpy arrays together. This uses a minimum amount of memory relative to bulkier routines such as `mfdataset`. The flattened arrays are reshaped before they are returned, but there is an option to keep them flattened, which is necessary for certain data analysis methods like principal component analysis.  
-
-* ##[ATW_relaxation_Susan.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ATW_relaxation_Susan.ipynb)  
-    
-    **ATW relaxation notebook**  
-
-* ##[Baynes_climatology.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Baynes_climatology.ipynb)  
-    
-    **Baynes climatology**  
 
 * ##[SalishSeaCast_timeseries_from_Skookum.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SalishSeaCast_timeseries_from_Skookum.ipynb)  
     
@@ -71,10 +33,6 @@ Descriptions below the links are from the first cell of the notebooks
     
     **Make Nowcast Timeseries**  
     This notebook describes the process of extracting a timeseries of SalishSeaCast Nowcast and HRDPS results for analysis.  
-
-* ##[SeicheScaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SeicheScaling.ipynb)  
-    
-    **Scaling Upwelling and Seicheing in the Strait of Georgia**  
 
 * ##[nowcast_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/nowcast_analysis.ipynb)  
     
@@ -107,16 +65,6 @@ Descriptions below the links are from the first cell of the notebooks
        3. [Varimax Rotation](#Varimax-Rotation)  
        4. [Explore Results](#2016-HRDPS-Wind-EOFs)  
 
-* ##[upwelling_geostrophic_velocities.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/upwelling_geostrophic_velocities.ipynb)  
-    
-    **Upwelling velocities notebook**  
-
-* ##[Upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling_scaling.ipynb)  
-    
-    **Upwelling Scaling**  
-      
-    ***  
-
 * ##[timeseries_tools_dev.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/timeseries_tools_dev.ipynb)  
     
     **`timeseries_tools` Development Notebook**  
@@ -128,29 +76,16 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[GRL2016_data.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/GRL2016_data.ipynb)  
     
-* ##[SalishSeaIdeal_wavedamping.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SalishSeaIdeal_wavedamping.ipynb)  
+* ##[matrix_interpolation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/matrix_interpolation.ipynb)  
     
-    **SalishSeaIdeal Wavedamping**  
-    In this notebook I'm attemping to arrest the Kelvin wave in the idealized Salish Sea NEMO configuration using a combination of bathymetry roughness and bottom friction.  
+    **Interpolation matrices for OpenDrift**  
+      
+    ***  
 
 * ##[NEMO_grid_rotation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NEMO_grid_rotation.ipynb)  
     
-* ##[Baynes_Sound_upwelling_runs_setup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Baynes_Sound_upwelling_runs_setup.ipynb)  
-    
-    **Baynes Sound upwelling runs setup**  
-      
-    ***  
-
-* ##[Ferry_upwelling_observations.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Ferry_upwelling_observations.ipynb)  
-    
 * ##[NEMOConfigSetup.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/NEMOConfigSetup.ipynb)  
     
-* ##[Analytical_upwelling_models_new.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Analytical_upwelling_models_new.ipynb)  
-    
-    **Analytical upwelling models**  
-      
-    ***  
-
 * ##[ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ONC_API_usage.ipynb)  
     
     **ONC API 2.0 Usage**  
@@ -176,26 +111,6 @@ Descriptions below the links are from the first cell of the notebooks
       
     **Import libraries**  
 
-* ##[ATW_relaxation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ATW_relaxation.ipynb)  
-    
-    **ATW relaxation notebook**  
-
-* ##[Satellite_SST.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Satellite_SST.ipynb)  
-    
-    **Satellite SST upwelling notebook**  
-      
-    Source: NASA JPL MUR project https://podaac.jpl.nasa.gov/Multi-scale_Ultra-high_Resolution_MUR-SST  
-
-* ##[DensitySections.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DensitySections.ipynb)  
-    
-    **Nowcast Upwelling Analysis**  
-
-* ##[Baynes_upwelling_run_comparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Baynes_upwelling_run_comparisons.ipynb)  
-    
-    **Baynes Upwelling Run Comparisons**  
-      
-    This notebook uses sequential cases beginning with the full configuration to see whether an upwelling event can be preserved along the Baynes Sound coastal section of Vancouver Island.  
-
 * ##[HRDPS_loading_numpy.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/HRDPS_loading_numpy.ipynb)  
     
     **HRDPS loading in Numpy**  
@@ -211,25 +126,9 @@ Descriptions below the links are from the first cell of the notebooks
     **Salish Sea Maps**  
     This notebook plots various maps relevant to the SalishSeaCast project. The first map is a general study area map. The second map shows the model domain and bathymetry. The third map shows the Strait of Georgia with relevant observation platform locations overplotted.  
 
-* ##[ShallowWaterModelSummary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/ShallowWaterModelSummary.ipynb)  
+* ##[working_with_HRDPS.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/working_with_HRDPS.ipynb)  
     
-    **Shallow water models of coastal upwelling**  
-      
-    This notebook summarizes several attempts to model coastal upwelling in the Strait of Georgia using the shallow water equations. These modelling attempts are an effort to explain the dynamics of enhanced upwelling around capes that we observe in the SalishSeaCast model (see [**Motivation**](#Motivation)). The following cases are explored:  
-      
-       1. [**Linear time dependence**](#Linear-time-dependence)  
-           * [Surface height sink near coast](#Surface-height-sink-near-coast)  
-           * [Linear bottom friction](#Linear-bottom-friction)  
-           * [Longshore windstress](#Longshore-windstress)  
-       2. [**Steady state**](#Steady-state)  
-           * [Linear bottom friction, non-zero depth gradient](#Linear-bottom-friction,-non-zero-depth-gradient)  
-           * [Longshore bottom friction, cross-shelf bottom slope](#Longshore-bottom-friction,-cross-shelf-bottom-slope)  
-
-* ##[New_upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/New_upwelling_scaling.ipynb)  
-    
-    **Upwelling Scaling**  
-      
-    ***  
+    **Working with HRDPS**  
 
 * ##[SedimentModel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SedimentModel.ipynb)  
     
