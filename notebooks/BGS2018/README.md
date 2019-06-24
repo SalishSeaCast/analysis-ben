@@ -6,9 +6,9 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[DICTA_world_rivers.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/DICTA_world_rivers.ipynb)  
+* ##[DICTA_world_rivers.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/BGS2018/DICTA_world_rivers.ipynb)  
     
-* ##[TA.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/TA.ipynb)  
+* ##[TA.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/BGS2018/TA.ipynb)  
     
     **Fraser/Strait of Georgia Freshwater Chemistry Analysis**  
     This is the data notebook  
@@ -19,7 +19,7 @@ Descriptions below the links are from the first cell of the notebooks
        4. [Fraser River Buoy pH Data](#Fraser-River-Buoy-pH-Data)  
        5. [Freshwater DIC:TA scenarios](#Freshwater-DIC:TA-scenarios)  
 
-* ##[SOG_river_figures.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_river_figures.ipynb)  
+* ##[SOG_river_figures.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/BGS2018/SOG_river_figures.ipynb)  
     
     **SOG Freshwater Chemistry Sensitivity Notebook**  
     This is the model sensitivity notebook  
@@ -32,7 +32,7 @@ Descriptions below the links are from the first cell of the notebooks
            * [SOG Salinity Average Figures](#SOG-Salinity-Average-Figures)  
            * [Salinity Space Figures](#Salinity-Space-Figures)  
 
-* ##[FraserBasinMap.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/FraserBasinMap.ipynb)  
+* ##[FraserBasinMap.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/BGS2018/FraserBasinMap.ipynb)  
     
 
 ##License
