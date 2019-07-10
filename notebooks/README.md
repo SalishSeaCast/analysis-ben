@@ -130,6 +130,10 @@ Descriptions below the links are from the first cell of the notebooks
     
     **Working with HRDPS**  
 
+* ##[maps_cartopy.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/maps_cartopy.ipynb)  
+    
+    **Maps in Cartopy**  
+
 * ##[SedimentModel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SedimentModel.ipynb)  
     
 
