@@ -6,6 +6,8 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
+* ##[Satellite_upwelling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling/Satellite_upwelling.ipynb)  
+    
 * ##[Idealized_cape_runs.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling/Idealized_cape_runs.ipynb)  
     
     **Idealized Cape Runs**  
