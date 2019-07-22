@@ -61,6 +61,12 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
+* ##[EOF_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling/EOF_analysis.ipynb)  
+    
+    **EOF Analysis of NEMO surface tracers**  
+      
+    ***  
+
 * ##[ATW_relaxation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling/ATW_relaxation.ipynb)  
     
     **ATW relaxation notebook**  
