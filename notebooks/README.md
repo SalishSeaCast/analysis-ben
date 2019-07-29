@@ -34,6 +34,10 @@ Descriptions below the links are from the first cell of the notebooks
     **Make Nowcast Timeseries**  
     This notebook describes the process of extracting a timeseries of SalishSeaCast Nowcast and HRDPS results for analysis.  
 
+* ##[maps_for_Genna.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/maps_for_Genna.ipynb)  
+    
+    **Maps for Genna**  
+
 * ##[nowcast_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/nowcast_analysis.ipynb)  
     
     **Nowcast Analysis Notebook**  
