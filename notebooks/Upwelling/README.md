@@ -32,6 +32,8 @@ Descriptions below the links are from the first cell of the notebooks
     
     **Scaling Upwelling and Seicheing in the Strait of Georgia**  
 
+* ##[Nitrate_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling/Nitrate_analysis.ipynb)  
+    
 * ##[upwelling_geostrophic_velocities.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling/upwelling_geostrophic_velocities.ipynb)  
     
     **Upwelling velocities notebook**  
