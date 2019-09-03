@@ -89,6 +89,12 @@ Descriptions below the links are from the first cell of the notebooks
       
     This notebook uses sequential cases beginning with the full configuration to see whether an upwelling event can be preserved along the Baynes Sound coastal section of Vancouver Island.  
 
+* ##[new_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling/new_scaling.ipynb)  
+    
+    **New Scaling**  
+      
+    ***  
+
 * ##[ShallowWaterModelSummary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/Upwelling/ShallowWaterModelSummary.ipynb)  
     
     **Shallow water models of coastal upwelling**  
