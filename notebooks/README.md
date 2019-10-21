@@ -130,6 +130,8 @@ Descriptions below the links are from the first cell of the notebooks
     **Salish Sea Maps**  
     This notebook plots various maps relevant to the SalishSeaCast project. The first map is a general study area map. The second map shows the model domain and bathymetry. The third map shows the Strait of Georgia with relevant observation platform locations overplotted.  
 
+* ##[WindAnalysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/WindAnalysis.ipynb)  
+    
 * ##[working_with_HRDPS.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/working_with_HRDPS.ipynb)  
     
     **Working with HRDPS**  
