@@ -6,14 +6,6 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/maps.ipynb)  
-    
-    **Study area maps**  
-      
-    For upwelling manuscript, Moore-Maley et al. in prep  
-      
-    ***  
-
 * ##[EOF_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/EOF_analysis.ipynb)  
     
     **EOF Analysis of NEMO surface tracers**  
@@ -28,6 +20,16 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
+* ##[maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/maps.ipynb)  
+    
+    **Study area maps**  
+      
+    For upwelling manuscript, Moore-Maley et al. in prep  
+      
+    ***  
+
+* ##[twolayermodel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/twolayermodel.ipynb)  
+    
 
 ##License
 
