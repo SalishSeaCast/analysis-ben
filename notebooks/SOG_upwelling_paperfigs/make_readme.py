@@ -24,7 +24,7 @@ import re
 
 nbviewer = 'http://nbviewer.ipython.org/urls'
 repo = 'bitbucket.org/salishsea/analysis-ben/raw/tip'
-repo_dir = 'notebooks'
+repo_dir = 'notebooks/SOG_upwelling_paperfigs'
 url = os.path.join(nbviewer, repo, repo_dir)
 title_pattern = re.compile('#{1,6} ?')
 readme = """The Jupyter Notebooks in this directory are made by Ben for

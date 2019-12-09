@@ -6,13 +6,15 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[EOF_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/EOF_analysis.ipynb)  
+* ##[EOF_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/EOF_analysis.ipynb)  
     
     **EOF Analysis of NEMO surface tracers**  
       
     ***  
 
-* ##[hindcast_nitrate_summary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/hindcast_nitrate_summary.ipynb)  
+* ##[Upwelling_animations.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/Upwelling_animations.ipynb)  
+    
+* ##[hindcast_nitrate_summary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/hindcast_nitrate_summary.ipynb)  
     
     **Hindcast nitrate summary**  
       
@@ -20,7 +22,9 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
-* ##[maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/maps.ipynb)  
+* ##[Untitled.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/Untitled.ipynb)  
+    
+* ##[maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/maps.ipynb)  
     
     **Study area maps**  
       
@@ -28,8 +32,12 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
-* ##[twolayermodel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/twolayermodel.ipynb)  
+* ##[twolayermodel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/twolayermodel.ipynb)  
     
+    **Wind-driven upwelling - 2 layer SWE analysis**  
+      
+    ***  
+
 
 ##License
 
