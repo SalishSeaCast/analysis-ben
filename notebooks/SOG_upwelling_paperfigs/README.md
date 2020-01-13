@@ -12,6 +12,18 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
+* ##[richardson_number_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/richardson_number_scaling.ipynb)  
+    
+    **Richardson number scaling**  
+      
+    ***  
+
+* ##[NEMO_postprocessing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/NEMO_postprocessing.ipynb)  
+    
+    **NEMO upwelling results postprocessing**  
+      
+    ***  
+
 * ##[Upwelling_animations.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/Upwelling_animations.ipynb)  
     
 * ##[hindcast_nitrate_summary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/hindcast_nitrate_summary.ipynb)  
@@ -22,8 +34,6 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
-* ##[Untitled.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/Untitled.ipynb)  
-    
 * ##[maps.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/maps.ipynb)  
     
     **Study area maps**  
@@ -38,10 +48,16 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
+* ##[Burger_number_dependence.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/Burger_number_dependence.ipynb)  
+    
+    **Burger number dependence**  
+      
+    ***  
+
 
 ##License
 
-These notebooks and files are copyright 2013-2019
+These notebooks and files are copyright 2013-2020
 by the Salish Sea MEOPAR Project Contributors
 and The University of British Columbia.
 
