@@ -20,7 +20,7 @@ Descriptions below the links are from the first cell of the notebooks
 
 * ##[NEMO_postprocessing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/NEMO_postprocessing.ipynb)  
     
-    **NEMO upwelling results postprocessing**  
+    **NEMO upwelling postprocessing development notebook**  
       
     ***  
 
@@ -42,9 +42,9 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
-* ##[twolayermodel.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/twolayermodel.ipynb)  
+* ##[two_layer_upwelling_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/two_layer_upwelling_analysis.ipynb)  
     
-    **Wind-driven upwelling - 2 layer SWE analysis**  
+    **Wind-driven upwelling - 2 layer analysis**  
       
     ***  
 
