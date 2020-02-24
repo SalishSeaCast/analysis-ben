@@ -1,37 +1,6 @@
 # Subdomains
 ideal: [114, 398, 334, 898]
-NO3: [115, 361, 310, 789]
-...
-# Sections
----
-- name: FR
-  yx: [452, [238, 319]]
-  yw: [138, 142]
-  xw: [141, 153]
-  aN: 10
-  aS: 10
-  c: m
-- name: SSOG
-  yx: [523, [193, 274]]
-  yw: [149, 154]
-  xw: [128, 141]
-  aN: 1.5
-  aS: 1
-  c: orange
-- name: CSOG
-  yx: [624, [133, 190]]
-  yw: [167, 169]
-  xw: [111, 119]
-  aN: 2
-  aS: 10
-  c: steelblue
-- name: NSOG
-  yx: [689, [127, 194]]
-  yw: [179, 182]
-  xw: [107, 116]
-  aN: 2
-  aS: 5
-  c: c
+NO3: [115, 360, 310, 788]
 ...
 # Northerly events
 ---

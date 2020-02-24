@@ -15,7 +15,7 @@ from salishsea_tools import utilities
 
 # Specify parameters
 # --------------------------------------------------------------------------
-daterange = ['2015 Jan 1', '2019 Jan 1']
+daterange = ['2010 Jan 1', '2020 Jan 1']
 varlist = ['nitrate']
 indices = {'x': [115, 360], 'y': [310, 788], 'deptht': [0]}
 paths = {
