@@ -42,6 +42,8 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
+* ##[model_ramblings.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/model_ramblings.ipynb)  
+    
 * ##[two_layer_upwelling_analysis.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/two_layer_upwelling_analysis.ipynb)  
     
     **Wind-driven upwelling - 2 layer analysis**  
