@@ -6,6 +6,12 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
+* ##[drifter_evaluation_master.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/drifter_evaluation_master.ipynb)  
+    
+    **Master Drifter Evaluation Notebook**  
+      
+    ***  
+
 * ##[opendrift_quicksim.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/opendrift_quicksim.ipynb)  
     
     **OpenDrift quick simulation**  
@@ -77,7 +83,7 @@ Descriptions below the links are from the first cell of the notebooks
 
 ##License
 
-These notebooks and files are copyright 2013-2019
+These notebooks and files are copyright 2013-2020
 by the Salish Sea MEOPAR Project Contributors
 and The University of British Columbia.
 

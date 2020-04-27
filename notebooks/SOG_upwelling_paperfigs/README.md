@@ -12,6 +12,12 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
+* ##[topographic_dependence_summary.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/topographic_dependence_summary.ipynb)  
+    
+    **Summary of topographic dependence**  
+      
+    ***  
+
 * ##[richardson_number_scaling.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/SOG_upwelling_paperfigs/richardson_number_scaling.ipynb)  
     
     **Richardson number scaling**  
