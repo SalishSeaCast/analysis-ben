@@ -52,17 +52,18 @@ for fn in notebooks:
     if first_cell_type in 'markdown raw'.split():
         desc_lines = first_cell['source']
         for line in desc_lines:
+            lspace = ' ' if line.startswith('   ') else ''
             suffix = ''
             if title_pattern.match(line):
                 line = title_pattern.sub('**', line)
                 suffix = '**'
             if line.endswith('\n'):
                 readme += (
-                    '     {line}{suffix}  \n'
-                    .format(line=line[:-1], suffix=suffix))
+                    '    {lspace}{line}{suffix}  \n'
+                    .format(lspace=lspace, line=line[:-1], suffix=suffix))
             else:
                 readme += (
-                    '     {line}{suffix}  '.format(line=line, suffix=suffix))
+                    '    {lspace}{line}{suffix}  '.format(lspace=lspace, line=line, suffix=suffix))
         readme += '\n' * 2
 license = """
 ## License
