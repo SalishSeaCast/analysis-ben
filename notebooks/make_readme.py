@@ -27,7 +27,9 @@ repo = 'github.com/SalishSeaCast/analysis-ben/blob/master'
 repo_dir = 'notebooks'
 url = os.path.join(nbviewer, repo, repo_dir)
 title_pattern = re.compile('#{1,6} ?')
-readme = """The Jupyter Notebooks in this directory are made by Ben for
+readme = """## Notebooks
+
+The Jupyter Notebooks in this directory are made by Ben for
 quick sharing of results.
 
 The links below are to static renderings of the notebooks via
@@ -36,9 +38,9 @@ Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
 """
-notebooks = (fn for fn in os.listdir('./') if fn.endswith('ipynb'))
+notebooks = (fn for fn in sorted(os.listdir('./')) if fn.endswith('ipynb'))
 for fn in notebooks:
-    readme += '* ## [{fn}]({url}/{fn})  \n    \n'.format(fn=fn, url=url)
+    readme += '***\n* ### [{fn}]({url}/{fn})  \n    \n'.format(fn=fn, url=url)
     with open(fn, 'rt') as notebook:
         contents = json.load(notebook)
     try:
