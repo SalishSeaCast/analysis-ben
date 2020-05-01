@@ -23,7 +23,7 @@ import re
 
 
 nbviewer = 'http://nbviewer.ipython.org/urls'
-repo = 'github/SalishSeaCast/analysis-ben/blob/master'
+repo = 'github.com/SalishSeaCast/analysis-ben/blob/master'
 repo_dir = 'notebooks/BGS2018'
 url = os.path.join(nbviewer, repo, repo_dir)
 title_pattern = re.compile('#{1,6} ?')
