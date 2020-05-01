@@ -58,14 +58,14 @@ for fn in notebooks:
                 suffix = '**'
             if line.endswith('\n'):
                 readme += (
-                    ' {line}{suffix}  \n'
+                    '     {line}{suffix}  \n'
                     .format(line=line[:-1], suffix=suffix))
             else:
                 readme += (
-                    ' {line}{suffix}  '.format(line=line, suffix=suffix))
+                    '     {line}{suffix}  '.format(line=line, suffix=suffix))
         readme += '\n' * 2
 license = """
-##License
+## License
 
 These notebooks and files are copyright 2013-{this_year}
 by the Salish Sea MEOPAR Project Contributors
