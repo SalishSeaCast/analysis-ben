@@ -30,8 +30,8 @@ title_pattern = re.compile('#{1,6} ?')
 readme = repo_dir.split('/')[-1].split('_')
 readme = ' '.join([s.capitalize() if s.islower() else s for s in readme])
 readme = '## ' + readme + '\n\n'
-readme += """The Jupyter Notebooks in this directory are made by Ben for
-quick sharing of results.
+readme += """The Jupyter Notebooks in this directory are made by Ben
+Moore-Maley for quick sharing of results.
 
 The links below are to static renderings of the notebooks via
 [nbviewer.ipython.org](http://nbviewer.ipython.org/).
@@ -52,18 +52,17 @@ for fn in notebooks:
     if first_cell_type in 'markdown raw'.split():
         desc_lines = first_cell['source']
         for line in desc_lines:
-            lspace = ' ' if line.startswith('   ') else ''
             suffix = ''
             if title_pattern.match(line):
                 line = title_pattern.sub('**', line)
                 suffix = '**'
             if line.endswith('\n'):
                 readme += (
-                    '    {lspace}{line}{suffix}  \n'
-                    .format(lspace=lspace, line=line[:-1], suffix=suffix))
+                    '    {line}{suffix}  \n'
+                    .format(line=line[:-1], suffix=suffix))
             else:
                 readme += (
-                    '    {lspace}{line}{suffix}  '.format(lspace=lspace, line=line, suffix=suffix))
+                    '    {line}{suffix}  '.format(line=line, suffix=suffix))
         readme += '\n' * 2
 license = """
 ## License

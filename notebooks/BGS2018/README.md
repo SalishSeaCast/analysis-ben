@@ -1,14 +1,18 @@
-The Jupyter Notebooks in this directory are made by Ben for
-quick sharing of results.
+## BGS2018
+
+The Jupyter Notebooks in this directory are made by Ben
+Moore-Maley for quick sharing of results.
 
 The links below are to static renderings of the notebooks via
 [nbviewer.ipython.org](http://nbviewer.ipython.org/).
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* [DICTA_world_rivers.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/DICTA_world_rivers.ipynb)  
+***
+* ### [DICTA_world_rivers.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/DICTA_world_rivers.ipynb)  
     
-* [TA.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/TA.ipynb)  
+***
+* ### [TA.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/TA.ipynb)  
     
     **Fraser/Strait of Georgia Freshwater Chemistry Analysis**  
     This is the data notebook  
@@ -19,9 +23,11 @@ Descriptions below the links are from the first cell of the notebooks
        4. [Fraser River Buoy pH Data](#Fraser-River-Buoy-pH-Data)  
        5. [Freshwater DIC:TA scenarios](#Freshwater-DIC:TA-scenarios)  
 
-* [FraserBasinMap.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/FraserBasinMap.ipynb)  
+***
+* ### [FraserBasinMap.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/FraserBasinMap.ipynb)  
     
-* [SOG_river_figures.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/SOG_river_figures.ipynb)  
+***
+* ### [SOG_river_figures.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/SOG_river_figures.ipynb)  
     
     **SOG Freshwater Chemistry Sensitivity Notebook**  
     This is the model sensitivity notebook  

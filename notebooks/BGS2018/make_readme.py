@@ -27,8 +27,11 @@ repo = 'github.com/SalishSeaCast/analysis-ben/blob/master'
 repo_dir = 'notebooks/BGS2018'
 url = os.path.join(nbviewer, repo, repo_dir)
 title_pattern = re.compile('#{1,6} ?')
-readme = """The Jupyter Notebooks in this directory are made by Ben for
-quick sharing of results.
+readme = repo_dir.split('/')[-1].split('_')
+readme = ' '.join([s.capitalize() if s.islower() else s for s in readme])
+readme = '## ' + readme + '\n\n'
+readme += """The Jupyter Notebooks in this directory are made by Ben
+Moore-Maley for quick sharing of results.
 
 The links below are to static renderings of the notebooks via
 [nbviewer.ipython.org](http://nbviewer.ipython.org/).
@@ -38,7 +41,7 @@ Descriptions below the links are from the first cell of the notebooks
 """
 notebooks = (fn for fn in os.listdir('./') if fn.endswith('ipynb'))
 for fn in notebooks:
-    readme += '* [{fn}]({url}/{fn})  \n    \n'.format(fn=fn, url=url)
+    readme += '***\n* ### [{fn}]({url}/{fn})  \n    \n'.format(fn=fn, url=url)
     with open(fn, 'rt') as notebook:
         contents = json.load(notebook)
     try:

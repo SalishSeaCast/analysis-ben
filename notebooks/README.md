@@ -1,7 +1,7 @@
 ## Notebooks
 
-The Jupyter Notebooks in this directory are made by Ben for
-quick sharing of results.
+The Jupyter Notebooks in this directory are made by Ben
+Moore-Maley for quick sharing of results.
 
 The links below are to static renderings of the notebooks via
 [nbviewer.ipython.org](http://nbviewer.ipython.org/).
@@ -16,10 +16,10 @@ Descriptions below the links are from the first cell of the notebooks
       
     This notebook is organized into the following sections:  
       
-        1. [Load Nowcast and GEM Record](#Load-Nowcast-and-GEM-Record)  
-        2. [Principal Component Analysis](#Principal-Component-Analysis)  
-        3. [Varimax Rotation](#Varimax-Rotation)  
-        4. [Explore Results](#2016-HRDPS-Wind-EOFs)  
+       1. [Load Nowcast and GEM Record](#Load-Nowcast-and-GEM-Record)  
+       2. [Principal Component Analysis](#Principal-Component-Analysis)  
+       3. [Varimax Rotation](#Varimax-Rotation)  
+       4. [Explore Results](#2016-HRDPS-Wind-EOFs)  
 
 ***
 * ### [GRL2016_data.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/GRL2016_data.ipynb)  
@@ -169,22 +169,22 @@ Descriptions below the links are from the first cell of the notebooks
       
     The analysis is organized into the following sections:  
       
-        1. [Load Results](#Load-Results)  
-        2. [Postprocessing](#Postprocessing)  
-        3. [Wind Averaging](#Wind-Averaging)  
-        4. Spectral Coherence  
-        5. [Principal Component Analysis](#Principal-Component-Analysis)  
-        6. Canonical Correlation Analysis  
+       1. [Load Results](#Load-Results)  
+       2. [Postprocessing](#Postprocessing)  
+       3. [Wind Averaging](#Wind-Averaging)  
+       4. Spectral Coherence  
+       5. [Principal Component Analysis](#Principal-Component-Analysis)  
+       6. Canonical Correlation Analysis  
 
 ***
 * ### [timeseries_tools_dev.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/timeseries_tools_dev.ipynb)  
     
     **`timeseries_tools` Development Notebook**  
     This notebook is for developing a prototype Nowcast timeseries analysis package. The primary goal of this package is to be memory-efficient. As such, the results arrays are flattened to 2-D (time, space) so that land points can be removed. The 2-D dimensions are also ideal for some analyses like PCA. The basic workflow proceeds as follows:  
-        * Flatten the model grid and mask to 2-D (time, space) and remove land indices  
-        * Load, process, and flatten hourly Nowcast Results to 2-D (time, space) and remove land indices  
-        * Concatenate consecutive 24 hour periods  
-        * Reshape the concatenated `Numpy ndarray` to (time, depth, y, x)  
+       * Flatten the model grid and mask to 2-D (time, space) and remove land indices  
+       * Load, process, and flatten hourly Nowcast Results to 2-D (time, space) and remove land indices  
+       * Concatenate consecutive 24 hour periods  
+       * Reshape the concatenated `Numpy ndarray` to (time, depth, y, x)  
 
 ***
 * ### [timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/timeseries_tools_usage.ipynb)  
