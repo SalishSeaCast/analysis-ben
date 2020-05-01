@@ -6,19 +6,13 @@ The links below are to static renderings of the notebooks via
 Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
-* ##[drifter_evaluation_master.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/drifter_evaluation_master.ipynb)  
+* ##[drifter_evaluation_master.ipynb](http://nbviewer.ipython.org/urls/github/SalishSeaCast/analysis-ben/blob/master/notebooks/OpenDrift/drifter_evaluation_master.ipynb)  
     
     **Master Drifter Evaluation Notebook**  
       
     ***  
 
-* ##[opendrift_quicksim.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/opendrift_quicksim.ipynb)  
-    
-    **OpenDrift quick simulation**  
-      
-    ***  
-
-* ##[OceanParcels_workflow.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/OceanParcels_workflow.ipynb)  
+* ##[OceanParcels_workflow.ipynb](http://nbviewer.ipython.org/urls/github/SalishSeaCast/analysis-ben/blob/master/notebooks/OpenDrift/OceanParcels_workflow.ipynb)  
     
     **OceanParcels workflow**  
       
@@ -40,7 +34,7 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
-* ##[opendrift_forcing.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/opendrift_forcing.ipynb)  
+* ##[opendrift_forcing.ipynb](http://nbviewer.ipython.org/urls/github/SalishSeaCast/analysis-ben/blob/master/notebooks/OpenDrift/opendrift_forcing.ipynb)  
     
     **OpenDrift**  
       
@@ -58,23 +52,23 @@ Descriptions below the links are from the first cell of the notebooks
       
     ***  
 
-* ##[opendrift_debug.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/opendrift_debug.ipynb)  
+* ##[opendrift_debug.ipynb](http://nbviewer.ipython.org/urls/github/SalishSeaCast/analysis-ben/blob/master/notebooks/OpenDrift/opendrift_debug.ipynb)  
     
-* ##[drifter_comparisons.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/drifter_comparisons.ipynb)  
+* ##[drifter_comparisons.ipynb](http://nbviewer.ipython.org/urls/github/SalishSeaCast/analysis-ben/blob/master/notebooks/OpenDrift/drifter_comparisons.ipynb)  
     
     **Drifter comparisons**  
 
-* ##[drifter_comparisons2.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/drifter_comparisons2.ipynb)  
+* ##[drifter_comparisons2.ipynb](http://nbviewer.ipython.org/urls/github/SalishSeaCast/analysis-ben/blob/master/notebooks/OpenDrift/drifter_comparisons2.ipynb)  
     
     **Drifter evaluation example**  
 
-* ##[sample_opendrift_simulation.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/sample_opendrift_simulation.ipynb)  
+* ##[sample_opendrift_simulation.ipynb](http://nbviewer.ipython.org/urls/github/SalishSeaCast/analysis-ben/blob/master/notebooks/OpenDrift/sample_opendrift_simulation.ipynb)  
     
     **OpenDrift simulations forced by a regional ocean model (NEMO)**  
       
     ***  
 
-* ##[DrifterSimulations_parcels.ipynb](http://nbviewer.ipython.org/urls/bitbucket.org/salishsea/analysis-ben/raw/tip/notebooks/OpenDrift/DrifterSimulations_parcels.ipynb)  
+* ##[DrifterSimulations_parcels.ipynb](http://nbviewer.ipython.org/urls/github/SalishSeaCast/analysis-ben/blob/master/notebooks/OpenDrift/DrifterSimulations_parcels.ipynb)  
     
     **Drifter Simulations**  
       
