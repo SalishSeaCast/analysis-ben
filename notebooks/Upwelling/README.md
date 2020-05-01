@@ -9,18 +9,14 @@ Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
 ***
-* ### [Upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Upwelling_scaling.ipynb)  
+* ### [ATW_relaxation.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/ATW_relaxation.ipynb)  
     
-    **Upwelling Scaling**  
-      
-    ***  
+    **ATW relaxation notebook**  
 
 ***
-* ### [Upwelling_visualization.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Upwelling_visualization.ipynb)  
+* ### [ATW_relaxation_Susan.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/ATW_relaxation_Susan.ipynb)  
     
-    **Upwelling visualization**  
-      
-    ***  
+    **ATW relaxation notebook**  
 
 ***
 * ### [Analytical_upwelling_models_new.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Analytical_upwelling_models_new.ipynb)  
@@ -30,12 +26,32 @@ Descriptions below the links are from the first cell of the notebooks
     ***  
 
 ***
-* ### [Satellite_SST.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Satellite_SST.ipynb)  
+* ### [Baynes_Sound_upwelling_runs_setup.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Baynes_Sound_upwelling_runs_setup.ipynb)  
     
-    **Satellite SST upwelling notebook**  
+    **Baynes Sound upwelling runs setup**  
       
-    Source: NASA JPL MUR project https://podaac.jpl.nasa.gov/Multi-scale_Ultra-high_Resolution_MUR-SST  
+    ***  
 
+***
+* ### [Baynes_climatology.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Baynes_climatology.ipynb)  
+    
+    **Baynes climatology**  
+
+***
+* ### [Baynes_upwelling_run_comparisons.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Baynes_upwelling_run_comparisons.ipynb)  
+    
+    **Baynes Upwelling Run Comparisons**  
+      
+    This notebook uses sequential cases beginning with the full configuration to see whether an upwelling event can be preserved along the Baynes Sound coastal section of Vancouver Island.  
+
+***
+* ### [DensitySections.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/DensitySections.ipynb)  
+    
+    **Nowcast Upwelling Analysis**  
+
+***
+* ### [Ferry_upwelling_observations.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Ferry_upwelling_observations.ipynb)  
+    
 ***
 * ### [Idealized_TS_initialization.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Idealized_TS_initialization.ipynb)  
     
@@ -55,11 +71,6 @@ Descriptions below the links are from the first cell of the notebooks
     Here I'm showing my latest smooth and rough bathymetries with $C_D = 10^{-2}$ and $z_r = 0.07$ m  
 
 ***
-* ### [SeicheScaling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/SeicheScaling.ipynb)  
-    
-    **Scaling Upwelling and Seicheing in the Strait of Georgia**  
-
-***
 * ### [New_upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/New_upwelling_scaling.ipynb)  
     
     **Upwelling Scaling**  
@@ -67,21 +78,25 @@ Descriptions below the links are from the first cell of the notebooks
     ***  
 
 ***
-* ### [DensitySections.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/DensitySections.ipynb)  
+* ### [SalishSeaIdeal_wavedamping.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/SalishSeaIdeal_wavedamping.ipynb)  
     
-    **Nowcast Upwelling Analysis**  
+    **SalishSeaIdeal Wavedamping**  
+    In this notebook I'm attemping to arrest the Kelvin wave in the idealized Salish Sea NEMO configuration using a combination of bathymetry roughness and bottom friction.  
 
 ***
-* ### [Baynes_upwelling_run_comparisons.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Baynes_upwelling_run_comparisons.ipynb)  
+* ### [Satellite_SST.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Satellite_SST.ipynb)  
     
-    **Baynes Upwelling Run Comparisons**  
+    **Satellite SST upwelling notebook**  
       
-    This notebook uses sequential cases beginning with the full configuration to see whether an upwelling event can be preserved along the Baynes Sound coastal section of Vancouver Island.  
+    Source: NASA JPL MUR project https://podaac.jpl.nasa.gov/Multi-scale_Ultra-high_Resolution_MUR-SST  
 
 ***
-* ### [ATW_relaxation_Susan.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/ATW_relaxation_Susan.ipynb)  
+* ### [Satellite_upwelling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Satellite_upwelling.ipynb)  
     
-    **ATW relaxation notebook**  
+***
+* ### [SeicheScaling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/SeicheScaling.ipynb)  
+    
+    **Scaling Upwelling and Seicheing in the Strait of Georgia**  
 
 ***
 * ### [ShallowWaterModelSummary.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/ShallowWaterModelSummary.ipynb)  
@@ -99,24 +114,19 @@ Descriptions below the links are from the first cell of the notebooks
            * [Longshore bottom friction, cross-shelf bottom slope](#Longshore-bottom-friction,-cross-shelf-bottom-slope)  
 
 ***
-* ### [ATW_relaxation.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/ATW_relaxation.ipynb)  
+* ### [Upwelling_scaling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Upwelling_scaling.ipynb)  
     
-    **ATW relaxation notebook**  
+    **Upwelling Scaling**  
+      
+    ***  
 
 ***
-* ### [Baynes_climatology.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Baynes_climatology.ipynb)  
+* ### [Upwelling_visualization.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Upwelling_visualization.ipynb)  
     
-    **Baynes climatology**  
+    **Upwelling visualization**  
+      
+    ***  
 
-***
-* ### [SalishSeaIdeal_wavedamping.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/SalishSeaIdeal_wavedamping.ipynb)  
-    
-    **SalishSeaIdeal Wavedamping**  
-    In this notebook I'm attemping to arrest the Kelvin wave in the idealized Salish Sea NEMO configuration using a combination of bathymetry roughness and bottom friction.  
-
-***
-* ### [Satellite_upwelling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Satellite_upwelling.ipynb)  
-    
 ***
 * ### [new_scaling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/new_scaling.ipynb)  
     
@@ -125,22 +135,12 @@ Descriptions below the links are from the first cell of the notebooks
     ***  
 
 ***
-* ### [Ferry_upwelling_observations.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Ferry_upwelling_observations.ipynb)  
-    
-***
 * ### [upwelling_geostrophic_velocities.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/upwelling_geostrophic_velocities.ipynb)  
     
     **Upwelling velocities notebook**  
 
-***
-* ### [Baynes_Sound_upwelling_runs_setup.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Upwelling/Baynes_Sound_upwelling_runs_setup.ipynb)  
-    
-    **Baynes Sound upwelling runs setup**  
-      
-    ***  
 
-
-##License
+## License
 
 These notebooks and files are copyright 2013-2020
 by the Salish Sea MEOPAR Project Contributors

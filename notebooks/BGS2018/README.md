@@ -12,18 +12,6 @@ Descriptions below the links are from the first cell of the notebooks
 * ### [DICTA_world_rivers.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/DICTA_world_rivers.ipynb)  
     
 ***
-* ### [TA.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/TA.ipynb)  
-    
-    **Fraser/Strait of Georgia Freshwater Chemistry Analysis**  
-    This is the data notebook  
-    **Sections**  
-       1. [Local Functions](#Local-Functions)  
-       2. [Load Data](#Load-Data)  
-       3. [TA regressions](#TA-regressions)  
-       4. [Fraser River Buoy pH Data](#Fraser-River-Buoy-pH-Data)  
-       5. [Freshwater DIC:TA scenarios](#Freshwater-DIC:TA-scenarios)  
-
-***
 * ### [FraserBasinMap.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/FraserBasinMap.ipynb)  
     
 ***
@@ -40,8 +28,20 @@ Descriptions below the links are from the first cell of the notebooks
            * [SOG Salinity Average Figures](#SOG-Salinity-Average-Figures)  
            * [Salinity Space Figures](#Salinity-Space-Figures)  
 
+***
+* ### [TA.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/BGS2018/TA.ipynb)  
+    
+    **Fraser/Strait of Georgia Freshwater Chemistry Analysis**  
+    This is the data notebook  
+    **Sections**  
+       1. [Local Functions](#Local-Functions)  
+       2. [Load Data](#Load-Data)  
+       3. [TA regressions](#TA-regressions)  
+       4. [Fraser River Buoy pH Data](#Fraser-River-Buoy-pH-Data)  
+       5. [Freshwater DIC:TA scenarios](#Freshwater-DIC:TA-scenarios)  
 
-##License
+
+## License
 
 These notebooks and files are copyright 2013-2020
 by the Salish Sea MEOPAR Project Contributors

@@ -9,23 +9,16 @@ Descriptions below the links are from the first cell of the notebooks
 (if that cell contains Markdown or raw text).
 
 ***
+* ### [Burger_number_dependence.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/Burger_number_dependence.ipynb)  
+    
+    **Burger number dependence**  
+      
+    ***  
+
+***
 * ### [EOF_analysis.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/EOF_analysis.ipynb)  
     
     **EOF Analysis of NEMO surface tracers**  
-      
-    ***  
-
-***
-* ### [topographic_dependence_summary.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/topographic_dependence_summary.ipynb)  
-    
-    **Summary of topographic dependence**  
-      
-    ***  
-
-***
-* ### [richardson_number_scaling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/richardson_number_scaling.ipynb)  
-    
-    **Richardson number scaling**  
       
     ***  
 
@@ -58,21 +51,28 @@ Descriptions below the links are from the first cell of the notebooks
 * ### [model_ramblings.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/model_ramblings.ipynb)  
     
 ***
+* ### [richardson_number_scaling.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/richardson_number_scaling.ipynb)  
+    
+    **Richardson number scaling**  
+      
+    ***  
+
+***
+* ### [topographic_dependence_summary.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/topographic_dependence_summary.ipynb)  
+    
+    **Summary of topographic dependence**  
+      
+    ***  
+
+***
 * ### [two_layer_upwelling_analysis.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/two_layer_upwelling_analysis.ipynb)  
     
     **Wind-driven upwelling - 2 layer analysis**  
       
     ***  
 
-***
-* ### [Burger_number_dependence.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SOG_upwelling_paperfigs/Burger_number_dependence.ipynb)  
-    
-    **Burger number dependence**  
-      
-    ***  
 
-
-##License
+## License
 
 These notebooks and files are copyright 2013-2020
 by the Salish Sea MEOPAR Project Contributors
