@@ -27,9 +27,10 @@ repo = 'github.com/SalishSeaCast/analysis-ben/blob/master'
 repo_dir = 'notebooks'
 url = os.path.join(nbviewer, repo, repo_dir)
 title_pattern = re.compile('#{1,6} ?')
-readme = """## Notebooks
-
-The Jupyter Notebooks in this directory are made by Ben for
+readme = repo_dir.split('/')[-1].split('_')
+readme = ' '.join([s.capitalize() if s.islower() else s for s in readme])
+readme = '## ' + readme + '\n\n'
+readme += """The Jupyter Notebooks in this directory are made by Ben for
 quick sharing of results.
 
 The links below are to static renderings of the notebooks via
@@ -57,11 +58,11 @@ for fn in notebooks:
                 suffix = '**'
             if line.endswith('\n'):
                 readme += (
-                    '    {line}{suffix}  \n'
+                    '{line}{suffix}  \n'
                     .format(line=line[:-1], suffix=suffix))
             else:
                 readme += (
-                    '    {line}{suffix}  '.format(line=line, suffix=suffix))
+                    '{line}{suffix}  '.format(line=line, suffix=suffix))
         readme += '\n' * 2
 license = """
 ##License
