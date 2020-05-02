@@ -25,17 +25,6 @@ Descriptions below the links are from the first cell of the notebooks
 * ### [GRL2016_data.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/GRL2016_data.ipynb)  
     
 ***
-* ### [HRDPS_correction.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/HRDPS_correction.ipynb)  
-    
-    **HRDPS Correction Check**  
-    This notebook checks the HRDPS correction obtained from Luc Fillion's group  
-
-***
-* ### [HRDPS_loading_numpy.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/HRDPS_loading_numpy.ipynb)  
-    
-    **HRDPS loading in Numpy**  
-
-***
 * ### [Hakai_data.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Hakai_data.ipynb)  
     
 ***
@@ -52,9 +41,6 @@ Descriptions below the links are from the first cell of the notebooks
 
 ***
 * ### [NEMOConfigSetup.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/NEMOConfigSetup.ipynb)  
-    
-***
-* ### [NEMO_grid_rotation.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/NEMO_grid_rotation.ipynb)  
     
 ***
 * ### [ONC_API_usage.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/ONC_API_usage.ipynb)  
@@ -99,28 +85,8 @@ Descriptions below the links are from the first cell of the notebooks
     ***  
 
 ***
-* ### [SalishSeaCast_timeseries_from_Skookum.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SalishSeaCast_timeseries_from_Skookum.ipynb)  
-    
-    **Working with daily SalishSeaCast results from Skookum**  
-
-***
 * ### [SedimentModel.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/SedimentModel.ipynb)  
     
-***
-* ### [Tug_spill_preliminary.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/Tug_spill_preliminary.ipynb)  
-    
-***
-* ### [WindAnalysis.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/WindAnalysis.ipynb)  
-    
-***
-* ### [gemlam_weirdness.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/gemlam_weirdness.ipynb)  
-    
-    **Gemlam weirdness**  
-      
-    I was messing around with some of the early HRDPS record (gemlam) and noticed some inconsistencies in the gridding. I've included a few example dates below.  
-      
-    ***  
-
 ***
 * ### [make_nowcast_timeseries.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/make_nowcast_timeseries.ipynb)  
     
@@ -187,12 +153,6 @@ Descriptions below the links are from the first cell of the notebooks
        * Reshape the concatenated `Numpy ndarray` to (time, depth, y, x)  
 
 ***
-* ### [timeseries_tools_usage.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/timeseries_tools_usage.ipynb)  
-    
-    **Timeseries Tools Usage**  
-    This notebook demonstrates loading in a Nowcast timeseries using `timeseries_tools`. `Timeseries_tools` extracts only the required fields from the Nowcast netCDF files and concatenates the flattened (time, space) numpy arrays together. This uses a minimum amount of memory relative to bulkier routines such as `mfdataset`. The flattened arrays are reshaped before they are returned, but there is an option to keep them flattened, which is necessary for certain data analysis methods like principal component analysis.  
-
-***
 * ### [visualization_workflows_xarray.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/visualization_workflows_xarray.ipynb)  
     
     **Visualisation of NEMO/GEM/Observations using XArray**  
@@ -206,11 +166,6 @@ Descriptions below the links are from the first cell of the notebooks
     **SoG wind decomposition recipes**  
       
     ***  
-
-***
-* ### [working_with_HRDPS.ipynb](http://nbviewer.ipython.org/urls/github.com/SalishSeaCast/analysis-ben/blob/master/notebooks/working_with_HRDPS.ipynb)  
-    
-    **Working with HRDPS**  
 
 
 ## License
