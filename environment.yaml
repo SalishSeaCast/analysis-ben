@@ -14,6 +14,7 @@ channels:
 dependencies:
   - cartopy
   - cmocean
+  - ffmpeg
   - gsw
   - ipywidgets
   - jupyterlab
@@ -28,4 +29,5 @@ dependencies:
   - xarray
 
   - pip:
+    - roman
     - windrose
