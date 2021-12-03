@@ -17,22 +17,21 @@ def mtime_to_datetime(mtime):
     return datetime.fromordinal(int(mtime) - 366) + timedelta(days=mtime%1)
 
 
-def boundingbox(data, time, lon, lat, gridvars, gridref, size=1):
+def get_interpolation_args(data, time, lon, lat, gridvars, gridref, size=1):
     """Return a bounding box of coordinate, value pairs around a lonlat point
     """
-
+    
     n, m = gridvars['lonlat'][0].shape
     j, i = [gridref[var].sel(lats=lat, lons=lon, method='nearest').item() for var in ('jj', 'ii')]
-    if any([j < size, i < size, j >= n - size, i >= m - size]): return None, None
+    if any([j < size, i < size, j >= n - size, i >= m - size]): return np.nan, np.nan
     jslc, islc = [slice(coord - size, coord + size + 1) for coord in (j, i)]
     points = np.vstack([coord[jslc, islc].ravel() for coord in gridvars['lonlat']]).T
-    values = data.isel(y=jslc, x=islc).interp(time_counter=time).values
-    values = np.ma.masked_where(gridvars['mask'][jslc, islc] == 0, values).ravel()
+    dataarray = data.isel(y=jslc, x=islc).interp(time_counter=time).where(gridvars['mask'][..., jslc, islc])
     
-    return points, values
+    return points, dataarray
 
 
-def get_grid_variables(path='/home/bmoorema/MEOPAR/grid/'):
+def get_grid_variables(variables=['u', 'v'], path='/home/bmoorema/MEOPAR/grid/'):
     """Return grid variables dict GRIDVARS with LONLAT and MASK fields for U and V.
     Also return the GRIDREF xarray object for looking up ji from lonlat
     """
@@ -43,10 +42,11 @@ def get_grid_variables(path='/home/bmoorema/MEOPAR/grid/'):
     gridref = xr.open_dataset(path + 'grid_from_lat_lon_mask999.nc')
 
     # Grid variables
-    gridvars = {'u': {}, 'v': {}}
-    for var in ['u', 'v']:
+    gridvars = {}
+    for var in variables:
+        gridvars[var] = {}
         gridvars[var]['lonlat'] = [coords[key][0, ...].values for key in (f'glam{var}', f'gphi{var}')]
-        gridvars[var]['mask'] = mask[f'{var}mask'][0, 0, ...].values
+        gridvars[var]['mask'] = mask[f'{var}mask'][0, ...].values
     
     return gridvars, gridref
 
@@ -92,9 +92,9 @@ def get_NEMO_velocities(ID, drifters, NEMO, gridvars, gridref):
     vel = {'u': [], 'v': []}
     for time, lon, lat in zip(times, lons, lats):
         for var in ['u', 'v']:
-            points, values = boundingbox(NEMO[var], time, lon, lat, gridvars[var], gridref)
-            val = interpolate.griddata(points, values, (lon, lat)) if points is not None else np.nan
-            vel[var].append(float(val))
+            points, mask, values = get_interpolation_args(NEMO[var], time, lon, lat, gridvars[var], gridref)
+            values = np.ma.masked_where(mask == 0, values).ravel()
+            vel[var].append(float(interpolate.griddata(points, values, (lon, lat))))
     
     return {'time': times, 'longitude': lons, 'latitude': lats, 'u': np.array(vel['u']), 'v': np.array(vel['v'])}
 
