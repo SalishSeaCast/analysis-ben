@@ -23,7 +23,7 @@ def get_interpolation_args(data, time, lon, lat, gridvars, gridref, size=1):
     
     n, m = gridvars['lonlat'][0].shape
     j, i = [gridref[var].sel(lats=lat, lons=lon, method='nearest').item() for var in ('jj', 'ii')]
-    if any([j < size, i < size, j >= n - size, i >= m - size]): return np.nan, np.nan
+    if any([j < size, i < size, j >= n - size, i >= m - size]): return None, None
     jslc, islc = [slice(coord - size, coord + size + 1) for coord in (j, i)]
     points = np.vstack([coord[jslc, islc].ravel() for coord in gridvars['lonlat']]).T
     dataarray = data.isel(y=jslc, x=islc).interp(time_counter=time).where(gridvars['mask'][..., jslc, islc])
@@ -78,6 +78,59 @@ def get_drifter_IDs(daterange, drifters):
     return IDs, np.unique(times)
 
 
+def get_NEMO_tracers(daterange, dataframe, NEMO, gridvars, gridref, tol_time=600, tol_lonlat=0.001):
+    """
+    """
+    
+    # Extract fields
+    start, end = [parse(date) for date in daterange]
+    data = {'time': dataframe.index.values.astype('datetime64[s]').astype(datetime)}
+    variables = ['longitude', 'latitude', 'depth', 'temperature', 'salinity']
+    names = ['long_deg', 'lat_deg', 'pressure_dbar', 'temp_degc', 'salinity_teos10']
+    for var, name in zip(variables, names):
+        data[var] = dataframe[name].values.astype(float)
+        
+    # Remove nan and out-of-range values
+    index = np.logical_and.reduce([~np.isnan(data[var]) for var in variables])
+    index = np.logical_and(index, [start <= t <= end for t in times])
+    for var in data: data[var] = data[var][index]
+    
+    # Interpolate NEMO
+    for var in ['votemper', 'vosaline']: data[var] = []
+    time_last, lon_last, lat_last = datetime(2016, 1, 1), 0, 0
+    dataarray = {}
+    counter = 0
+    for time, lon, lat, depth in zip(*[data[var] for var in ('time', 'longitude', 'latitude', 'depth')]):
+        for var in ['votemper', 'vosaline']:
+
+            # Check if next station
+            next_station = np.logical_or.reduce((
+                abs(time - time_last) > timedelta(seconds=tol_time),
+                abs(lon - lon_last) > tol_lonlat,
+                abs(lat - lat_last) > tol_lonlat,
+            ))
+            if next_station:
+                points, dataarray[var] = get_interpolation_args(NEMO[var], time, lon, lat, gridvars, gridref)
+                dataarray[var] = dataarray[var].interpolate_na(dim='deptht', limit=2, fill_value='extrapolate')
+
+            # Interpolate NEMO
+            values = dataarray[var].interp(deptht=depth, kwargs={'fill_value': 'extrapolate'}).values.ravel()
+            data[var].append(float(interpolate.griddata(points, values, (lon, lat))))
+
+        # Update previous values
+        time_last, lon_last, lat_last = time, lon, lat
+        counter += 1
+        if counter == 10000:
+            print('Next 10000 complete ...')
+            sys.stdout.flush()
+            counter = 0
+    
+    # Lists to arrays
+    for var in ['votemper', 'vosaline']: data[var] = np.array(data[var])
+    
+    return data
+
+
 def get_NEMO_velocities(ID, drifters, NEMO, gridvars, gridref):
     """Interpolate NEMO velocites at times and positions based on drifter ID
     and return dict of arrays
@@ -92,14 +145,14 @@ def get_NEMO_velocities(ID, drifters, NEMO, gridvars, gridref):
     vel = {'u': [], 'v': []}
     for time, lon, lat in zip(times, lons, lats):
         for var in ['u', 'v']:
-            points, mask, values = get_interpolation_args(NEMO[var], time, lon, lat, gridvars[var], gridref)
-            values = np.ma.masked_where(mask == 0, values).ravel()
-            vel[var].append(float(interpolate.griddata(points, values, (lon, lat))))
+            points, dataarray = get_interpolation_args(NEMO[var], time, lon, lat, gridvars[var], gridref)
+            value = float(interpolate.griddata(points, dataarray.values.ravel(), (lon, lat))) if points is not None else np.nan
+            vel[var].append(value)
     
     return {'time': times, 'longitude': lons, 'latitude': lats, 'u': np.array(vel['u']), 'v': np.array(vel['v'])}
 
 
-def main_routine(
+def main_routine_drifters(
     runID, startdate, enddate,
     path_NEMO='/scratch/bmoorema/Results/Currents',
     path_obs='/home/bmoorema/project/SalishSea/obs',
@@ -138,6 +191,44 @@ def main_routine(
         sys.stdout.flush()
         velocities = get_NEMO_velocities(ID, drifters, NEMO, gridvars, gridref)
         pd.DataFrame(velocities).to_sql(f'drifter{ID:03d}', con, index=False)
+    con.close()
+    print('Done!')
+    sys.stdout.close()
+
+
+def main_routine(
+    runID, startdate, enddate,
+    path_NEMO='/scratch/bmoorema/Results/Currents',
+    path_obs='/home/bmoorema/project/SalishSea/obs',
+    path_save='/scratch/bmoorema/Tracers',
+
+):
+    """Process NEMO tracers for STARTDATE, ENDDATE
+    (STARTDATE, ENDDATE must match the results file path)
+    """
+
+    # Initialize
+    daterange = [startdate, enddate]
+    datestr = '_'.join(daterange)
+    sys.stdout = open(f'{path_save}/stdout/SSCtracers_{runID}_{datestr}.stdout', 'w')
+    rundir = f'SalishSeaCast_currenttuning_{runID}_{datestr}'
+    print('Processing results from ' + rundir)
+    sys.stdout.flush()
+    
+    # Load PSF CitSci data
+    dataframe = pd.read_csv(f'{path_obs}/CitSci2015_2019.csv', parse_dates=True, index_col='datetime_utc')
+
+    # Load NEMO
+    NEMO = {}
+    fn = f'{path_NEMO}/{rundir}/SalishSea_1h_{datestr}_grid_T.nc'
+    for var in ['votemper', 'vosaline']: NEMO[var] = xr.open_dataset(fn)[var]
+
+    # Get tracers and save to database
+    con = sql.connect(f'{path_save}/SSCtracers_{runID}_{datestr}.sqlite')
+    gridvars, gridref = get_grid_variables(variables=['t'])
+    gridvars = gridvars['t']
+    data = get_NEMO_tracers(daterange, dataframe, NEMO, gridvars, gridref)
+    pd.DataFrame(data).to_sql('PSF', con, index=False)
     con.close()
     print('Done!')
     sys.stdout.close()
