@@ -92,7 +92,7 @@ def get_NEMO_tracers(daterange, dataframe, NEMO, gridvars, gridref, tol_time=600
         
     # Remove nan and out-of-range values
     index = np.logical_and.reduce([~np.isnan(data[var]) for var in variables])
-    index = np.logical_and(index, [start <= t <= end for t in times])
+    index = np.logical_and(index, [start <= t <= end for t in data['time']])
     for var in data: data[var] = data[var][index]
     
     # Interpolate NEMO
