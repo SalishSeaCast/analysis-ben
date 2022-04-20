@@ -80,6 +80,7 @@ def load_drifter_data(
     # Get drifter IDs within daterange-bbox
     # and times on the half-hour for loading NEMO results into memory
     IDs, times = list(np.unique(data['id'].astype(int))), []
+    IDs = IDs[:10]
     for ID in IDs:
         coords = get_drifter_coords(ID, data)
         index = get_bbox_index(coords, [daterange, bbox[:2], bbox[2:]])
@@ -117,12 +118,13 @@ def load_PSF_data(
     # Append station string to ID column to make unique identifiers
     data['ID'] = data['ID'].astype(str) + data['station']
     IDs = np.unique(data['ID'])
+    IDs = IDs[:10]
     
     return data, IDs
 
 
 def load_DFO_data(
-    daterange, bbox=[-125.5, -122.7, 48, 50.6],
+    daterange, bbox=[None, None, None, None],
     path='/home/bmoorema/project/SalishSea/obs',
     file='DFO_CTD.sqlite',
 ):
@@ -147,6 +149,7 @@ def load_DFO_data(
     index = get_bbox_index([times, lons, lats], [daterange, bbox[:2], bbox[2:]])
     index = np.logical_and(index, ~index_nan)
     IDs, times, lons, lats = IDs[index], times[index], lons[index], lats[index]
+    IDs, times, lons, lats = IDs[:10], times[:10], lons[:10], lats[:10]
     
     return data, IDs, times, lons, lats
 
@@ -182,8 +185,8 @@ def get_PSF_cast(ID, data):
     index, variables = data['ID'] == ID, []
     for name in fieldnames:
         dtype = 'datetime64[s]' if name == 'datetime_utc' else float
-        variables.append(data[var][index].astype(dtype))
-    variables[0].astype(datetime)
+        variables.append(data[name][index].values.astype(dtype))
+    variables[0] = variables[0].astype(datetime)
     
     return variables
 
@@ -202,7 +205,7 @@ def get_DFO_cast(ID, data):
         for name in names:  # Try all field names since they vary between separate casts
             notnan = data[name][index].notna()
             if any(notnan):
-                profile = dataframe[name][index].values.astype(float)
+                profile = data[name][index].values.astype(float)
                 break
         index_nan = np.logical_and(index_nan, notnan)
         variables.append(profile)
@@ -210,7 +213,7 @@ def get_DFO_cast(ID, data):
     # Trim NaNs
     variables = [var[index_nan] for var in variables]
     
-    return
+    return variables
 
 
 def interpolate_NEMO(data, coords, gridvars, gridref, depths=None, size=1):
@@ -232,28 +235,29 @@ def interpolate_NEMO(data, coords, gridvars, gridref, depths=None, size=1):
 
         # Return NaN if j,i is outside of domain
         if any([j < size, i < size, j >= n - size, i >= m - size]):
-            return np.nan
-
-        # Extract coordinate-results pairs inside bbox
-        jslc, islc = [slice(coord - size, coord + size + 1) for coord in (j, i)]
-        points = np.vstack([coord[jslc, islc].ravel() for coord in gridvars['lonlat']]).T
-        dataarray = data.isel(y=jslc, x=islc).interp(time_counter=time).where(gridvars['mask'][..., jslc, islc])
-
-        # 3D interpolation (e.g. CTD data)
-        if depths is not None:
-            dataarray = dataarray.interpolate_na(dim='deptht', limit=2, fill_value='extrapolate')
-            interpolated = []
-            for depth in depths:
-                try:
-                    raw = dataarray.interp(deptht=depth, kwargs={'fill_value': 'extrapolate'}).values.ravel()
-                    interpolated.append(float(interpolate.griddata(points, raw, (lon, lat))))
-                except:
-                    interpolated.append(np.nan)
-
-        # 2D interpolation (e.g. drifters, ferry data)
+            interpolated = np.ones(len(depths)) * np.nan if depths is not None else np.nan
+        
         else:
-            raw = dataarray.values.ravel()
-            interpolated = float(interpolate.griddata(points, raw, (lon, lat)))
+            # Extract coordinate-results pairs inside bbox
+            jslc, islc = [slice(coord - size, coord + size + 1) for coord in (j, i)]
+            points = np.vstack([coord[jslc, islc].ravel() for coord in gridvars['lonlat']]).T
+            dataarray = data.isel(y=jslc, x=islc).interp(time_counter=time).where(gridvars['mask'][..., jslc, islc])
+
+            # 3D interpolation (e.g. CTD data)
+            if depths is not None:
+                dataarray = dataarray.interpolate_na(dim='deptht', limit=2, fill_value='extrapolate')
+                interpolated = []
+                for depth in depths:
+                    try:
+                        raw = dataarray.interp(deptht=depth, kwargs={'fill_value': 'extrapolate'}).values.ravel()
+                        interpolated.append(float(interpolate.griddata(points, raw, (lon, lat))))
+                    except:
+                        interpolated.append(np.nan)
+
+            # 2D interpolation (e.g. drifters, ferry data)
+            else:
+                raw = dataarray.values.ravel()
+                interpolated = float(interpolate.griddata(points, raw, (lon, lat)))
         
         # Append
         values.append(interpolated)
@@ -263,8 +267,9 @@ def interpolate_NEMO(data, coords, gridvars, gridref, depths=None, size=1):
 
 def process_NEMO_obs_matching(
     runID, category, startdate, enddate,
+    bbox=[-125.4, -122.5, 48.1, 50.5],
     root_nemo='/project/def-allen/bmoorema/results/Currents',
-    root_save='/scratch/bmoorema',
+    root_save='/scratch/bmoorema/evaluation',
 ):
     """Process NEMO-obs matching for CATEGORY, STARTDATE, ENDDATE
     (STARTDATE, ENDDATE must match the results file path)
@@ -286,7 +291,7 @@ def process_NEMO_obs_matching(
     # Load drifter data
     if category == 'drifters':
         names = ['time', 'longitude', 'latitude', 'u_obs', 'v_obs', 'u_nemo', 'v_nemo']
-        data_obj, IDs, times = load_drifter_data(daterange)
+        data_obj, IDs, times = load_drifter_data(daterange, bbox=bbox)
         gridvars, gridref = get_grid_variables()
         NEMO = {}
         for var, name in zip(['u', 'v'], ['vozocrtx', 'vomecrty']):
@@ -299,9 +304,9 @@ def process_NEMO_obs_matching(
     elif category in ['PSF', 'DFO']:
         names = ['time', 'longitude', 'latitude', 'depth', 'T_obs', 'S_obs', 'T_nemo', 'S_nemo']
         if category == 'PSF':
-            data_obj, IDs = load_PSF_data(daterange)
+            data_obj, IDs = load_PSF_data(daterange, bbox=bbox)
         elif category == 'DFO':
-            data_obj, IDs, times, lons, lats = load_DFO_data(daterange)
+            data_obj, IDs, times, lons, lats = load_DFO_data(daterange, bbox=bbox)
         gridvars, gridref = get_grid_variables(variables=['t'])
         gridvars = gridvars['t']
         NEMO = xr.open_dataset(f'{path_nemo}_grid_T.nc')
@@ -313,13 +318,13 @@ def process_NEMO_obs_matching(
     # Loop through sampling IDs
     data, n = {name: [] for name in names}, len(IDs)
     coordinate_list = [times, lons, lats] if category == 'DFO' else [range(n)]
-    for k, ID, coordinates in zip(range(n), IDs, zip(coordinate_list)):
+    for k, ID, coordinates in zip(range(n), IDs, zip(*coordinate_list)):
     
         # Drifters
         if category == 'drifters':
             
             # Get drifter track observations
-            times, lons, lats, u_obs, v_obs = get_drifter_track(ID, data_obs)
+            times, lons, lats, u_obs, v_obs = get_drifter_track(ID, data_obj)
             u_nemo, v_nemo = [interpolate_NEMO(NEMO[name], (times, lons, lats), gridvars[name], gridref) for var in ('u', 'v')]
             
             # Append values
@@ -332,16 +337,16 @@ def process_NEMO_obs_matching(
             
             # PSF
             if category == 'PSF':
-                times, lons, lats, depths, T_obs, S_obs = get_PSF_cast(ID, data_obs)
+                times, lons, lats, depths, T_obs, S_obs = get_PSF_cast(ID, data_obj)
             
             # DFO
             elif category == 'DFO':
-                ones = np.ones * len(coordinates[0])
-                times, lons, lats = [coord * ones for coord in coordinates]
-                depths, T_obs, S_obs = get_DFO_cast(ID, data_obs)
+                depths, T_obs, S_obs = get_DFO_cast(ID, data_obj)
+                ncast = len(depths)
+                times, lons, lats = [np.repeat(coord, ncast) for coord in coordinates]
                 
             # Get interpolated NEMO results
-            coords = [[[var][0]] for var in (times, lons, lats)]
+            coords = [[var[0]] for var in (times, lons, lats)]
             T_nemo, S_nemo = [interpolate_NEMO(NEMO[var], coords, gridvars, gridref, depths=depths) for var in ('votemper', 'vosaline')]
             
             # Append values
@@ -361,7 +366,7 @@ def process_NEMO_obs_matching(
         data[name] = np.hstack(data[name])
     
     # Close out
-    pd.DataFrame(data).to_csv(path_save)
+    pd.DataFrame(data).to_csv(path_save, index=False)
     print('Done!')
     sys.stdout.close()
 
