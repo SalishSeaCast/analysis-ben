@@ -1,9 +1,0 @@
-python3 process_NEMO_drifters.py base 20160401 20160930
-python3	process_NEMO_drifters.py base 20161001 20170331
-python3	process_NEMO_drifters.py base 20170401 20170930
-python3	process_NEMO_drifters.py frachs08 20160401 20160930
-python3 process_NEMO_drifters.py frachs08 20161001 20170331
-python3 process_NEMO_drifters.py frachs08 20170401 20170930
-python3 process_NEMO_drifters.py frachs13 20160401 20160930
-python3 process_NEMO_drifters.py frachs13 20161001 20170331
-python3 process_NEMO_drifters.py frachs13 20170401 20170930
