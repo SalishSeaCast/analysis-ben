@@ -12,22 +12,24 @@ channels:
   - conda-forge
 
 dependencies:
+  - bottleneck
   - cartopy
   - cmocean
+  - dask
   - ffmpeg
   - gsw
   - ipywidgets
   - jupyterlab
   - matplotlib
+  - netCDF4
+  - pandas
   - parcels
   - pip
-  - python
+  - python=3.9
   - scipy
   - scikit-learn
   - tqdm
-  - yaml
   - xarray
 
   - pip:
-    - roman
     - windrose
